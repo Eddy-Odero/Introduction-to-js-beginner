@@ -1,12 +1,15 @@
+const sourceObject = {
+  num: 42,
+  bool: true,
+  str: "some text",
+  log: console.log,
+};
+
 function get(key) {
-    return eval("sourceObject." + key);
+  return sourceObject[key];
 }
 
 function set(key, value) {
-    if (typeof value === "string") {
-        eval("sourceObject." + key + "='" + value + "'");
-    } else {
-        eval("sourceObject." + key + "=" + value);
-    }
-    return value;
+  sourceObject[key] = value;
+  return value;
 }
