@@ -1,10 +1,19 @@
-function getAcceleration(obj) {
-    let a1 = obj.f / obj.m
-    let a2 = obj.Δv / obj.Δt
-    let a3 = (2 * obj.d) / (obj.t * obj.t)
-    if (a1 === a2 && a1 === a3) {
-        return parseFloat(a1)
+function getAcceleration(value){
+    let force ,mass, distance, finalVelocity, finalTime, time;
+
+    force = value['f']
+    mass = value.m
+    distance = value.d
+    finalVelocity = value.Δv
+    time = value.t
+    finalTime = value.Δt
+
+    if (force && mass){
+        return force/ mass
+    } else if(finalVelocity && finalTime){
+        return finalVelocity/finalTime
+    }else if(distance && time){
+        return (2 *distance) / (time * time)
     }
     return "impossible"
-
 }
