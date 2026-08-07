@@ -1,52 +1,74 @@
-function arrToSet(arr) {
-  return new Set(arr);
+function arrToSet(v){
+    if (Array.isArray(v)){
+        return new Set(v)
+    }
+}
+function arrToStr(v){
+    if (Array.isArray(v)){
+        return v.join('')
+    }   
+}
+function setToArr(v){
+    if (v instanceof Set){
+        return Array.from(v)
+        
+    }   
+}
+function setToStr(v){
+    if (v instanceof Set){
+        return [...v].join('')
+    }
+}
+function strToArr(v){
+    if (typeof v === "string"){
+        return Array.from(v)
+    }
+}
+function strToSet(v){
+    if(typeof v === "string"){
+        return new Set(v)
+    }
+}
+function mapToObj(v){
+    if(v instanceof Map){
+        return Object.fromEntries(v)
+    }
+
 }
 
-function arrToStr(arr) {
-  return arr.join("");
+function objToArr(v){
+    if (typeof v === "object"){
+        return Object.values(v)
+    }
 }
 
-function setToArr(set) {
-  return [...set];
-}
+function objToMap(v){
+    if(typeof v === "object"){
+        return new Map(Object.entries(v))
 
-function setToStr(set) {
-  return [...set].join("");
+   }
 }
-
-function strToArr(str) {
-  return [...str];
+function arrToObj(v){
+    if (Array.isArray(v)){
+        return { ...v }
+    }
 }
+function strToObj(v){
+    if (typeof v === "string"){
+        return { ...v}
 
-function strToSet(str) {
-  return new Set(str);
+    }
 }
+function superTypeOf(v) {
+    if (v === null) return "null";
+    if (v === undefined) return "undefined";
 
-function mapToObj(map) {
-  return Object.fromEntries(map);
-}
-
-function objToArr(obj) {
-  return Object.values(obj);
-}
-
-function objToMap(obj) {
-  return new Map(Object.entries(obj));
-}
-
-function arrToObj(arr) {
-  return { ...arr };
-}
-
-function strToObj(str) {
-  return { ...str };
-}
-
-function superTypeOf(value) {
-  if (value === null) return "null";
-  if (value === undefined) return "undefined";
-  if (Array.isArray(value)) return "Array";
-  if (value instanceof Map) return "Map";
-  if (value instanceof Set) return "Set";
-  return value.constructor.name;
+    if (typeof v === "object") {
+        if (v instanceof Map) return "Map";
+        if (v instanceof Set) return "Set";
+        if (Array.isArray(v)) return "Array";
+        return "Object";
+    }
+    const type = typeof v;
+    return type.charAt(0).toUpperCase() + type.slice(1);
 }
