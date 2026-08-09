@@ -1,0 +1,34 @@
+This project focuses on re-creating the behavior of JavaScript’s Array.reverse() method, while also extending it to handle strings. You’ll write a single function capable of reversing the order of characters in a string or elements in an array — without using any built-in reversing functions.
+
+Role Play
+You’re developing a lightweight JavaScript utility library where built-in array methods aren’t available. Your task is to implement a universal reverse function that can handle both arrays and strings, maintaining type integrity and returning the reversed version of the given input.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to manipulate arrays and strings through indexing and iteration.
+
+How to build a general-purpose function that adapts to different data types.
+
+How Array.reverse() works internally.
+
+How to work without mutating the original input (if desired).
+
+Instructions
+General
+Create a function named reverse that:
+
+Accepts either an array or a string as its argument.
+
+Returns a new array or string with all elements or characters in reverse order.
+
+Must not use the built-in Array.reverse() method.
+
+Tip: Use a loop or recursion to rebuild the input in reverse order. Note: Make sure the function correctly handles both strings and arrays.
+
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+Array.prototype.reverse = undefined;
+Resources
+Array.reverse

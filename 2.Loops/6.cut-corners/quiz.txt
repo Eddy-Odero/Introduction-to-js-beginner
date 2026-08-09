@@ -1,0 +1,39 @@
+Create the following functions, each behaving like its JavaScript Math counterpart:
+
+round: behaves like Math.round().
+
+ceil: behaves like Math.ceil().
+
+floor: behaves like Math.floor().
+
+trunc: behaves like Math.trunc().
+
+Restrictions
+You must not use:
+
+String conversions
+
+Bitwise operators
+
+The % operator
+
+Tip: Consider how these functions behave for both positive and negative decimal numbers.
+
+Usage
+const nums = [3.7, -3.7, 3.1, -3.1];
+console.log(nums.map(round));
+console.log(nums.map(floor));
+console.log(nums.map(trunc));
+console.log(nums.map(ceil));
+Output:
+
+[ 4, -4, 3, -3 ]
+[ 3, -4, 3, -4 ]
+[ 3, -3, 3, -3 ]
+[ 4, -3, 4, -3 ]
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+Math.round = Math.ceil = Math.floor = Math.trunc = undefined;
+Resources
+Math

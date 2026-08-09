@@ -1,0 +1,34 @@
+This project focuses on practicing string manipulation using slicing operations. You’ll create a set of small, focused functions that extract or remove specific portions of a string based on its position, helping you better understand how string indexing and slicing work.
+
+Role Play
+You’re working on a simple text processing module that handles short strings, trimming or extracting specific parts as needed. Your task is to implement a set of utility functions that can cut or keep certain portions of text, mimicking how substring and slice operations behave in JavaScript.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to access and extract specific parts of a string.
+
+How to use indexing and slice logic to manipulate text.
+
+How to design multiple small, reusable functions with clear purposes.
+
+Instructions
+General
+Create the following functions, each taking a single string as an argument:
+
+cutFirst: returns the string with the first 2 characters removed.
+
+cutLast: returns the string with the last 2 characters removed.
+
+cutFirstLast: returns the string with the first 2 and last 2 characters removed.
+
+keepFirst: returns only the first 2 characters.
+
+keepLast: returns only the last 2 characters.
+
+keepFirstLast: returns the first 2 characters and the last 2 characters, effectively the string with its middle removed. When the string is 4 characters or shorter the two halves overlap, so return the string unchanged rather than duplicating characters (e.g. keepFirstLast('af') → 'af', not 'afaf', and keepFirstLast('yoafdyo') → 'yoyo').
+
+Tip: Use slicing operations to extract parts of the string without modifying the original.
+
+Resources
+Array.slice

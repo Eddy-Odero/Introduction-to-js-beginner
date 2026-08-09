@@ -1,0 +1,43 @@
+This project focuses on re-creating the behavior of the slice() method found in both arrays and strings. You’ll build a custom slice function that can handle different types of inputs and return a portion of the original data without modifying it.
+
+Role Play
+You’re contributing to a lightweight JavaScript library designed to replicate key built-in methods. Your task is to implement the slice function so that it behaves like both Array.slice() and String.slice(), allowing developers to extract portions of data seamlessly — even without access to JavaScript’s native implementation.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to handle both arrays and strings with a single function.
+
+How to work with indexes, including positive and negative values.
+
+How to return a new value without modifying the original input.
+
+How slice() differs from similar methods like splice().
+
+Instructions
+General
+Create a function named slice that replicates the behavior of both Array.slice() and String.slice().
+
+It should:
+
+Accept three arguments:
+
+The string or array to process.
+
+The starting index.
+
+An optional ending index (exclusive).
+
+Return a new array or string containing the extracted section.
+
+Work for both array and string inputs.
+
+Note: You must not use the native Array.slice() or String.slice() methods. Tip: Remember that negative indexes count from the end of the sequence.
+
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+Array.prototype.slice = undefined;
+String.prototype.slice = undefined;
+Resources
+Array.slice
