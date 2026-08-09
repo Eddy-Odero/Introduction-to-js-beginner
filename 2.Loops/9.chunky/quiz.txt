@@ -1,0 +1,42 @@
+This project focuses on dividing an array into smaller, evenly sized sub-arrays. You’ll implement a function that takes an array and a chunk size, then returns a new array containing grouped sections of the original.
+
+Role Play
+You’re developing a data processing utility that needs to handle large arrays by splitting them into smaller, manageable sections for easier computation. Your task is to implement the chunk function — a helper tool that divides arrays into smaller parts of a specified size while ensuring all elements are preserved, even if the final chunk is smaller.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to traverse arrays and extract sub-arrays based on a size value.
+
+How to handle uneven divisions and leftover elements.
+
+How to build utility functions that return structured collections of data.
+
+How to manipulate arrays without altering the original input.
+
+Instructions
+General
+Create a function named chunk that:
+
+Accepts two arguments:
+
+An array to be divided.
+
+An integer representing the size of each chunk.
+
+Returns a new array containing sub-arrays (chunks) of the specified size.
+
+If the array cannot be split evenly, the last sub-array will contain the remaining elements.
+
+Tip: Use a loop or slicing logic to extract sub-arrays. Note: Make sure the original array is not modified.
+
+Example
+console.log(chunk(["a", "b", "c", "d"], 2));
+// Output: [ [ 'a', 'b' ], [ 'c', 'd' ] ]
+
+console.log(chunk(["a", "b", "c", "d", "e"], 2));
+// Output: [ [ 'a', 'b' ], [ 'c', 'd' ], [ 'e' ] ]
+Resources
+Array.slice
+
+Loops

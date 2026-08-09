@@ -1,0 +1,45 @@
+This project focuses on recreating the behavior of JavaScript’s Array.flat() method — a powerful utility for collapsing nested arrays into a single array. You’ll implement your own version that takes an array as its first argument and flattens it according to the specific depth behavior.
+
+Role Play
+You’ve been tasked with implementing part of a lightweight array utility library for a data processing engine. One of the missing functions is flat, which is used to simplify nested data structures. Your job is to create a custom version that unfolds nested arrays into a single, continuous list of elements.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to traverse nested arrays using recursion or loops.
+
+How to merge and flatten arrays dynamically.
+
+How the Array.flat() method works internally.
+
+How to return a new array while keeping the original structure untouched.
+
+Instructions
+General
+Create a function named flat that:
+
+Takes an array (that may contain nested arrays) as its first argument.
+
+Takes an optional depth as its second argument that specifies how many nested levels to flatten. It defaults to 1, exactly like Array.flat().
+
+Returns a new array with nested elements flattened by up to depth levels.
+
+Works like Array.flat(), but with the array as the first argument and the depth as the second. Passing Infinity flattens all levels.
+
+Tip: Use recursion, decreasing the depth by one on each level, so it stops once depth runs out. Note: The original array should not be modified.
+
+Example
+console.log(flat([1, [2, [3]]]));
+// Output: [1, 2, [3]]                  // default depth of 1: only one level is flattened
+
+console.log(flat([1, [2, [3, [4]]]], 2));
+// Output: [1, 2, 3, [4]]               // depth of 2
+
+console.log(flat([1, [2, [3, [4]]]], Infinity));
+// Output: [1, 2, 3, 4]                 // every level is flattened
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+Array.prototype.flat = undefined;
+Resources
+Array.flat
