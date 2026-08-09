@@ -1,0 +1,37 @@
+This project focuses on implementing your own versions of JavaScript’s split() and join() methods. You’ll manually reproduce how strings are broken into arrays and how arrays are joined into strings — without relying on the native implementations.
+
+Role Play
+You’re contributing to a lightweight JavaScript runtime where several native methods are missing. Your task is to rebuild two fundamental text and array utilities — split and join — from scratch. These functions will serve as the backbone for future string and array operations in your runtime.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How String.split() and Array.join() work internally.
+
+How to manipulate strings and arrays using loops and conditional logic.
+
+How to manage separators and edge cases (empty strings, single elements, etc.).
+
+How to write versatile utility functions that handle common data transformations.
+
+Instructions
+General
+Implement two functions:
+
+split: behaves like String.split(), but takes the string as its first argument and the separator as the second argument.
+
+join: behaves like Array.join(), but takes the array as its first argument and the separator as the second argument.
+
+Note: Both functions must work without using the native methods listed below. Tip: Think about how to build your result step-by-step by iterating over characters or elements.
+
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+String.prototype.split = undefined;
+String.prototype.match = undefined;
+RegExp.prototype.exec = undefined;
+Array.prototype.join = undefined;
+Resources
+Array.join
+
+String.split
