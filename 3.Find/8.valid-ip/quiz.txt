@@ -1,0 +1,54 @@
+This project focuses on building a regular expression that can correctly detect and extract valid IPv4 addresses — optionally including a TCP port number. You’ll create a function that identifies only valid IPs, respecting the constraints of both IP octets (0–255) and port numbers (0–65,535).
+
+Role Play
+You’ve joined a cybersecurity team developing a network log analyzer. Your task is to implement a function, findIP, that scans through text logs and extracts only valid IP addresses, optionally followed by ports. This will help identify network endpoints from mixed data sources.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to validate IPv4 addresses using regular expressions.
+
+How to define numerical ranges and reject invalid values (e.g., 256 or 01).
+
+How to support optional ports after a colon (:).
+
+How to return arrays of matches for pattern-based data extraction.
+
+Instructions
+General
+Create a function named findIP that:
+
+Takes a string as input.
+
+Returns an array containing all valid IPv4 addresses found in the text.
+
+Each IP may optionally include a port (e.g., 192.168.0.1:8080).
+
+Ignores invalid IPs such as those with:
+
+Values greater than 255 in any octet.
+
+Leading zeros (e.g., 012.4.5.6).
+
+Invalid port numbers (greater than 65535).
+
+Tip: Each IP segment (octet) must match numbers between 0–255. Note: The port (if present) should follow a colon (:) and be between 0–65535.
+
+Example
+const text = `
+Valid: 192.168.0.1, 10.0.0.1:8080, 172.16.254.1:65535
+Invalid: 256.100.50.25, 192.168.01.1, 10.0.0.1:70000
+`;
+
+console.log(findIP(text));
+// Output: [
+//   '192.168.0.1',
+//   '10.0.0.1:8080',
+//   '172.16.254.1:65535'
+// ]
+Resources
+Learn RegEx
+
+IPv4 Addressing (Wikipedia)
+
+TCP/UDP Port Numbers

@@ -1,0 +1,48 @@
+This project focuses on extracting structured price data from strings using regular expressions with capturing groups. You’ll design a function that identifies valid prices, extracts their numerical components, and returns them as a structured 2D array.
+
+Role Play
+You’ve been hired to help build a financial data parser that scans text and extracts monetary values. Your function, groupPrice, will identify all prices embedded in strings, returning each as a grouped breakdown — showing both the full price and its decimal parts for later data analysis.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to design RegEx patterns with capturing groups.
+
+How to extract structured data (e.g., numbers and decimals) from text.
+
+How to process multiple matches into an organized 2D array format.
+
+How to gracefully handle cases with no matches.
+
+Instructions
+General
+Create a function named groupPrice that:
+
+Takes a string as an argument.
+
+Returns a 2D array, where each inner array represents a price breakdown in the format:
+
+[ fullMatch, integerPart, decimalPart ]
+
+Returns an empty array if no prices are found.
+
+Detects prices formatted with either a 3-letter currency code (e.g. USD) or a $ sign, immediately followed by a number with decimals (e.g. USD12.31 or $4.00). A bare number with no currency prefix (e.g. 0.32) is not a match.
+
+Tip: Use capturing groups () in your regular expression to extract specific portions of the match. Note: Make sure your RegEx supports multiple occurrences using the global flag /g.
+
+Example
+console.log(groupPrice("The item costs USD12.31 and the tax is EUR9.99"));
+// Output: [
+//   ["USD12.31", "12", "31"],
+//   ["EUR9.99", "9", "99"]
+// ]
+
+console.log(groupPrice("Your change is $4.00"));
+// Output: [["$4.00", "4", "00"]]
+
+console.log(groupPrice("No prices here!"));
+// Output: []
+Resources
+RegEx Capturing Groups
+
+RegExp.exec()

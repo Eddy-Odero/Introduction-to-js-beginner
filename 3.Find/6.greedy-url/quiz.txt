@@ -1,0 +1,65 @@
+This project helps you practice regular expressions with a focus on greedy quantifiers and pattern matching for URLs. You’ll write three different functions to extract URLs from a dataset and filter them based on the number of query parameters they contain.
+
+Role Play
+You’ve joined a data scraping team tasked with cleaning and analyzing web content. The dataset you’re given is messy and filled with random text mixed with URLs. Your goal is to create tools that can extract valid URLs and categorize them based on how many query parameters they include — testing your mastery of RegEx patterns and quantifiers.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to detect and extract URLs using regular expressions.
+
+How to apply greedy quantifiers to capture extended text patterns.
+
+How to count query parameters in a URL using pattern logic.
+
+How to use RegEx-based filtering to process text efficiently.
+
+Instructions
+General
+Create three functions, each taking a single string argument (dataSet) and returning an array of strings:
+
+getURL:
+
+Returns all valid URLs found in the dataSet.
+
+Only URLs beginning with http:// or https:// are considered valid.
+
+greedyQuery:
+
+Returns only the URLs that have at least 3 query parameters (e.g., ?a=1&b=2&c=3).
+
+notSoGreedy:
+
+Returns only the URLs that have at least 2 but not more than 3 query parameters.
+
+Tip: Use greedy quantifiers like .+ or {n,} to capture long sequences. Note: Query parameters are separated by &, and each must follow the key=value format.
+
+Example
+const dataSet = `
+qqq http:// qqqq q qqqqq https://something.com/hello qqqqqqq 
+qhttp://example.com/hello?you=something&something=you
+https://page.com/test?x=1&y=2&z=3
+https://data.com/path?a=1&b=2&c=3&d=4
+`;
+
+console.log(getURL(dataSet));
+// Output: [
+//   'https://something.com/hello',
+//   'http://example.com/hello?you=something&something=you',
+//   'https://page.com/test?x=1&y=2&z=3',
+//   'https://data.com/path?a=1&b=2&c=3&d=4'
+// ]
+
+console.log(greedyQuery(dataSet));
+// Output: [
+//   'https://page.com/test?x=1&y=2&z=3',
+//   'https://data.com/path?a=1&b=2&c=3&d=4'
+// ]
+
+console.log(notSoGreedy(dataSet));
+// Output: [
+//   'http://example.com/hello?you=something&something=you',
+//   'https://page.com/test?x=1&y=2&z=3'
+// ]
+Resources
+Learn RegEx
