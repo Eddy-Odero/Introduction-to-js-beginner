@@ -1,0 +1,37 @@
+This project focuses on practicing regular expressions to extract specific patterns from text. You’ll write a function that detects sequences where a letter is followed by a space and then a single-digit number, ensuring the pattern is not immediately followed by another letter.
+
+Role Play
+You’ve joined a data cleaning project for a text recognition tool. One of your tasks is to extract patterns like “a 2” or “b 7” from large text samples, where a letter is followed by a space and a single-digit number. Your letterSpaceNumber function will help identify and collect these patterns accurately.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to construct regular expressions using shorthand character sets.
+
+How to use lookahead assertions to ensure proper pattern termination.
+
+How to apply global matching to find multiple occurrences in text.
+
+How to return structured results (arrays) from pattern matches.
+
+Instructions
+General
+Create a function named letterSpaceNumber that:
+
+Takes a string as an argument.
+
+Returns an array containing all occurrences where:
+
+A letter is followed by a space and then a single-digit number.
+
+The number is not followed by another letter.
+
+If there are no matches, it should return an empty array.
+
+Tip: Use shorthand character classes like \w, \d, or \s to simplify your expression. Note: Use the global flag (/g) to capture all occurrences, not just the first.
+
+Example
+console.log(letterSpaceNumber("example 1, example 20"));
+// Output: ['e 1']
+Resources
+RegEx Shorthand Character Sets

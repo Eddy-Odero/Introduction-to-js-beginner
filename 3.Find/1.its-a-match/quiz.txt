@@ -1,0 +1,38 @@
+This project introduces you to regular expressions (RegEx) and how they can be used to match patterns in strings. You’ll create expressions that specifically detect the substring "hi" in different positions — anywhere, at the beginning, at the end, or as the entire string.
+
+Role Play
+You’ve joined a small team maintaining a text search utility inspired by the Unix command grep. To start learning about how pattern-matching works, your first task is to create a few simple regular expressions that detect the word "hi" in different contexts. These expressions will later serve as building blocks for more complex search operations.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How regular expressions define search patterns within text.
+
+How to use anchors (^ and $) to control where patterns can appear.
+
+The difference between matching anywhere and matching exact positions.
+
+How to represent and test simple patterns in JavaScript.
+
+Instructions
+General
+Create four regular expression variables that detect the string "hi" under specific conditions:
+
+normal: matches the expression 'hi' anywhere in the string.
+
+begin: matches 'hi' only at the beginning of a string.
+
+end: matches 'hi' only at the end of a string.
+
+beginEnd: matches 'hi' only when the string is exactly 'hi'.
+
+Tip: Use ^ to anchor matches to the start and $ to anchor matches to the end. Note: You can test your expressions using the .test() method in JavaScript.
+
+Example
+console.log(normal.test("oh hi there")); // true
+console.log(begin.test("hi there")); // true
+console.log(end.test("say hi")); // true
+console.log(beginEnd.test("hi")); // true
+console.log(beginEnd.test("hiya")); // false
+Resources
+RegEx Anchors
