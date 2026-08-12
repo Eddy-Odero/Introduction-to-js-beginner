@@ -1,0 +1,38 @@
+This project focuses on using regular expression lookarounds to detect specific word patterns in text. You’ll write a function that searches for words containing 'ion' that come immediately after a 't', and then return those words with the 'ion' portion removed.
+
+Role Play
+You’ve joined a data analysis team working on a linguistic parsing tool that extracts word patterns from scientific text. Your current task is to identify and collect words that contain the substring 'tion' (for example, “action” or “caution”), but remove the 'ion' part for further analysis. This exercise will help you practice advanced RegEx lookarounds and text extraction techniques.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to use RegEx lookarounds to find text patterns based on context.
+
+How to capture and transform parts of words using regular expressions.
+
+How to return arrays of matches derived from a string.
+
+How to manipulate captured substrings in JavaScript using .match() and .map().
+
+Instructions
+General
+Create a function named ionOut that:
+
+Takes a string as input.
+
+Returns an array of words that contain 'ion' immediately following a 't'.
+
+Each returned word should have the 'ion' part removed.
+
+If no matches are found, return an empty array.
+
+Tip: Use lookbehind to ensure 'ion' is preceded by 't', and word boundaries (\b) to isolate words. Note: You may use .match() or .replace() along with a capturing group to collect and transform results.
+
+Example
+console.log(ionOut("attention caution nation motion"));
+// Output: ['attent', 'caut', 'nat', 'mot']
+
+console.log(ionOut("creation fiction emotion"));
+// Output: ['creat', 'fict', 'emot']
+Resources
+Learn RegEx Lookarounds

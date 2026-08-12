@@ -1,0 +1,42 @@
+This project focuses on working with regular expressions and counting matches in strings. You’ll create a function that compares how many times two different regular expressions match within the same input, returning whether they occur an equal number of times.
+
+Role Play
+You’re building a small text validation tool for a linguistic analysis system. One of the checks ensures that certain types of words or patterns appear the same number of times in a given text. Your job is to implement the sameAmount function, which verifies whether two different regular expressions match a string equally often.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to apply multiple regular expressions to a single string.
+
+How to use global matching to count all occurrences of a pattern.
+
+How to compare and validate match counts logically.
+
+How to handle no matches or empty results gracefully.
+
+Instructions
+General
+Create a function named sameAmount that:
+
+Takes three arguments:
+
+A string to be tested.
+
+A regular expression reg1.
+
+A regular expression reg2.
+
+Returns true if both regular expressions match the string the same number of times.
+
+Returns false otherwise.
+
+Tip: Count all occurrences of each pattern. The regexes you receive may not carry the global (/g) flag, so add it yourself when counting (e.g. rebuild each one with new RegExp(reg.source, 'g')); otherwise .match() only finds the first occurrence and every count collapses to 1. Note: If .match() returns null, treat it as zero matches.
+
+Example
+console.log(sameAmount("abc123abc", /a/g, /1/g));
+// Output: false
+
+console.log(sameAmount("xoxo", /x/g, /o/g));
+// Output: true
+Resources
+Using regular expressions in JavaScript

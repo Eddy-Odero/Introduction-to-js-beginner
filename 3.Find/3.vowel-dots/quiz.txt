@@ -1,0 +1,36 @@
+This project introduces you to regular expressions with character sets, helping you practice pattern-based text replacement. You’ll create a function that automatically places a dot (.) after every vowel in a string, using a RegEx to detect vowel characters efficiently.
+
+Role Play
+You’ve been assigned to a text processing project for a playful text filter app. One of its features adds stylized dots after vowels for visual flair. Your mission is to implement the vowelDots function that decorates any input string by inserting a dot after every vowel.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to use character sets in regular expressions.
+
+How to detect and replace specific groups of characters in text.
+
+How to perform pattern-based substitutions using .replace() in JavaScript.
+
+How to apply case-insensitive pattern matching.
+
+Instructions
+General
+Create a function named vowelDots that:
+
+Takes a string as an argument.
+
+Returns a new string where every vowel (a, e, i, o, u) is immediately followed by a dot (.).
+
+Stores the regular expression used for detecting vowels in a variable named vowels.
+
+Tip: Use a character set (e.g. [aeiou]) and remember to apply the global and case-insensitive flags. Note: You can use the .replace() method to apply the transformation efficiently.
+
+Example
+console.log(vowelDots("hello world"));
+// Output: 'he.llo wo.rld'
+
+console.log(vowelDots("Vowels are fun"));
+// Output: 'Vo.we.ls a.re fu.n'
+Resources
+RegEx Character Sets
