@@ -1,0 +1,74 @@
+This project challenges you to bend time and space — literally! You’ll redefine how weeks work and create custom time manipulation functions. The first function, addWeek, introduces a 14-day week system, while the second, timeTravel, lets you change specific components of a date and time as if you could rewrite reality itself.
+
+Role Play
+You’ve joined a team of developers building tools for the Sorcerer Supreme — Dr. Strange. Time behaves differently in his dimension, where a week lasts 14 days instead of 7, and reality itself allows for temporal adjustments. Your task is to build two powerful functions: one to interpret this new week system, and another to reshape time at will.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to use and manipulate the JavaScript Date object.
+
+How to calculate day offsets and map them to custom calendar systems.
+
+How to handle time adjustment dynamically from object data.
+
+How to create clear and reusable functions that modify date properties safely.
+
+Instructions
+General
+You must create two functions:
+
+addWeek(date)
+
+Takes a JavaScript Date object as an argument.
+
+Returns a string representing the day of the week according to a 14-day week system.
+
+The epoch (starting reference date) is 0001-01-01, which corresponds to Monday.
+
+The sequence of days is:
+
+Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday,
+secondMonday, secondTuesday, secondWednesday, secondThursday,
+secondFriday, secondSaturday, secondSunday
+timeTravel({ date, hour, minute, second })
+
+Takes an object as its argument.
+
+The object includes:
+
+date: a JavaScript Date object.
+
+hour: a number (0–23).
+
+minute: a number (0–59).
+
+second: a number (0–59).
+
+Returns a new Date object with the updated time values, preserving the date.
+
+Tip: For addWeek, you can compute the total number of days since the epoch and use modulo arithmetic (% 14) to map it to your new week. Note: For timeTravel, create a copy of the date before modifying it to avoid side effects.
+
+Example
+addWeek(new Date("0001-01-01")); // Output: 'Monday'
+addWeek(new Date("0001-01-02")); // Output: 'Tuesday'
+addWeek(new Date("0001-01-07")); // Output: 'Sunday'
+addWeek(new Date("0001-01-08")); // Output: 'secondMonday'
+addWeek(new Date("0001-01-09")); // Output: 'secondTuesday'
+
+// timeTravel example:
+timeTravel({
+  date: new Date("2020-05-29 23:25:22"),
+  hour: 21,
+  minute: 22,
+  second: 22,
+}).toString();
+
+// Output:
+// Fri May 29 2020 21:22:22 GMT+0100 (Western European Summer Time)
+Resources
+JavaScript Date Object
+
+Working with Dates and Times in JS
+
+Modulus Operator (%)
