@@ -1,0 +1,47 @@
+This project challenges you to calculate specific calendar dates from week and year information. You’ll create a function that determines the first day (Monday) of a given week in a particular year, taking into account real-world edge cases such as weeks overlapping into the previous year.
+
+Role Play
+You’ve joined a team developing a scheduling system for an international logistics company. They operate on a weekly planning model, and your task is to compute the exact starting date (Monday) of any given week in a specified year. Accuracy is essential — even when a week begins before the year officially starts.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to perform date arithmetic using JavaScript’s Date object.
+
+How to compute specific dates based on week numbers and year offsets.
+
+How to correctly format dates as strings in the dd-mm-yyyy format.
+
+How to handle edge cases where a week overlaps the previous or next year.
+
+Instructions
+General
+Create a function named firstDayWeek that:
+
+Accepts two arguments:
+
+A number representing the week of the year (from 1 to 53).
+
+A string representing the year (e.g., "2024").
+
+Returns a string formatted as dd-mm-yyyy that represents the Monday of that week.
+
+If the week starts in the previous year, the function should return January 1st of the specified year instead.
+
+Tip: You can use JavaScript’s Date object to find the day of the week for January 1st and then calculate offsets to reach the correct Monday. Note: Remember that in JavaScript, days of the week are represented as numbers (0 = Sunday, 1 = Monday, … 6 = Saturday).
+
+Example
+console.log(firstDayWeek(1, "2024"));
+// Output: '01-01-2024'  (since week 1 contains January 1st)
+
+console.log(firstDayWeek(10, "2025"));
+// Output: '03-03-2025'  (the Monday of week 10 in 2025)
+
+console.log(firstDayWeek(1, "2021"));
+// Output: '01-01-2021'  (week 1 starts on Friday, but we return Jan 1st)
+Resources
+JavaScript Date Object
+
+Working with Dates
+
+Date Formatting in JS
