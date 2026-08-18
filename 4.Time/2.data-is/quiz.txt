@@ -1,0 +1,77 @@
+This project focuses on validating and comparing JavaScript Date objects. You’ll create a set of utility functions that check if dates are valid, occur before or after other dates, or exist in the past or future relative to the current time.
+
+Role Play
+You’ve joined a scheduling software team tasked with improving date validation logic. Users often input incorrect or outdated dates, so you need to build a small library of helper functions — similar to what date-fns provides — to ensure date-related operations behave correctly.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to validate JavaScript Date objects.
+
+How to compare two dates accurately.
+
+How to check if a date lies in the past or future relative to the current system time.
+
+How to handle invalid or malformed Date inputs gracefully.
+
+Instructions
+General
+Note on inputs: each function accepts a Date object or a numeric timestamp (a number of milliseconds, e.g. Date.now()). Both are treated as valid time values. Any other type, including a date string such as '2013-01-01', must be treated as invalid (isValid returns false, and the comparison functions return false when either argument is invalid).
+
+Create the following five functions:
+
+isValid(date)
+
+Accepts a Date object or a numeric timestamp.
+
+Returns false if the value is invalid (an Invalid Date, NaN, or a non-Date/non-number such as a string).
+
+Returns true otherwise.
+
+isAfter(date1, date2)
+
+Accepts two Date objects.
+
+Returns true if the first date is after the second.
+
+isBefore(date1, date2)
+
+Accepts two Date objects.
+
+Returns true if the first date is before the second.
+
+isFuture(date)
+
+Accepts a Date object.
+
+Returns true if the date is valid and occurs after the current date.
+
+isPast(date)
+
+Accepts a Date object.
+
+Returns true if the date is valid and occurs before the current date.
+
+Tip: Use getTime() to compare date values numerically. Note: Invalid dates return NaN from getTime(), which can help you test for validity.
+
+Example
+const date1 = new Date("2024-01-01");
+const date2 = new Date("2023-01-01");
+const invalid = new Date("invalid");
+
+console.log(isValid(date1)); // true
+console.log(isValid(invalid)); // false
+console.log(isAfter(date1, date2)); // true
+console.log(isBefore(date2, date1)); // true
+console.log(isFuture(new Date("2999-01-01"))); // true
+console.log(isPast(new Date("1999-12-31"))); // true
+Resources
+date-fns: isValid
+
+date-fns: isAfter
+
+date-fns: isBefore
+
+date-fns: isFuture
+
+date-fns: isPast
