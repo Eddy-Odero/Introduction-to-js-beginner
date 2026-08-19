@@ -1,0 +1,62 @@
+This project helps you master working with JavaScript’s Date object by building small utility functions that determine specific calendar-related conditions — such as whether a date falls on a Friday, during the weekend, in a leap year, or on the last day of the month.
+
+Role Play
+You’ve been hired by a calendar app startup that wants to add some fun features. Your mission is to implement date utility functions that help categorize and analyze days — for example, determining if a given date is a Friday (because everyone knows it’s Friday, Friday), or if it’s the last day of a month for financial processing.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to use JavaScript’s Date object for day and month calculations.
+
+How to check for specific weekdays using getDay().
+
+How to determine leap years mathematically.
+
+How to identify the last day of a month accurately.
+
+Instructions
+General
+Create the following functions, each taking a single Date object as an argument:
+
+isFriday(date)
+
+Returns true if the given date is a Friday.
+
+Returns false otherwise.
+
+isWeekend(date)
+
+Returns true if the date falls on a Saturday (6) or Sunday (0).
+
+Returns false otherwise.
+
+isLeapYear(date)
+
+Returns true if the year of the date is a leap year.
+
+A leap year occurs if:
+
+The year is divisible by 4, and
+
+Not divisible by 100, unless it’s also divisible by 400.
+
+isLastDayOfMonth(date)
+
+Returns true if the date represents the last day of the month.
+
+Hint: Compare the current day to the number of days in the month.
+
+Tip: Use date.getDay() to determine weekdays, and new Date(year, month + 1, 0) to find the last day of a month. Note: Always ensure the input is a valid Date object.
+
+Example
+console.log(isFriday(new Date("2024-03-01"))); // true
+console.log(isWeekend(new Date("2024-03-03"))); // true
+console.log(isLeapYear(new Date("2024-01-01"))); // true
+console.log(isLastDayOfMonth(new Date("2024-02-29"))); // true
+console.log(isLastDayOfMonth(new Date("2024-02-28"))); // false
+Resources
+date-fns: isWeekend
+
+date-fns: isAfter
+
+date-fns: isLastDayOfMonth
