@@ -1,0 +1,65 @@
+This project focuses on parsing and interpreting cron expressions — simple time-based scheduling patterns. You’ll build a function that compares a given cron pattern with a Date object to determine if they match, based only on numeric values and wildcard (*) expressions.
+
+Role Play
+You’ve been hired by a server automation platform to help implement a lightweight task scheduler. Your responsibility is to create a validator that checks whether the current time matches a given cron pattern. This will serve as the foundation for running tasks at specific intervals or times of day.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to parse cron expressions and interpret their meaning.
+
+How to extract and compare date components using JavaScript’s Date object.
+
+How to handle wildcard (*) patterns in time-based scheduling.
+
+How to implement logical matching between two time representations.
+
+Instructions
+General
+Create a function named matchCron that:
+
+Takes two arguments:
+
+A cron string — a valid pattern containing numbers and *.
+
+A Date object.
+
+Returns true if the cron expression matches the given date, and false otherwise.
+
+Only supports numbers and the wildcard symbol *.
+
+You don’t need to handle other cron syntax (like /, -, or ,).
+
+Cron Format
+A cron expression consists of five fields separated by spaces:
+
+* * * * *
+| | | | |
+| | | | +- Day of the Week   (1-7, where 1 = Monday)
+| | | +--- Month             (1-12)
+| | +----- Day of the Month  (1-31)
+| +------- Hour              (0-23)
++--------- Minute            (0-59)
+Each field can contain either:
+
+A specific number, or
+
+A wildcard (*), which means “match any value”.
+
+Tip: Split the cron string into its parts, extract the corresponding values from the Date object, and compare them in order. Note: The JavaScript Date object uses Sunday as 0, so you may need to adjust for the cron system (where Monday is 1 and Sunday is 7).
+
+Example
+console.log(matchCron("9 * * * *", new Date("2020-05-30 18:09:00"))); // true
+console.log(matchCron("9 * * * *", new Date("2020-05-30 19:09:00"))); // true
+console.log(matchCron("9 * * * *", new Date("2020-05-30 19:21:00"))); // false
+
+//         | | | | |
+//         | | | | +- Day of the Week   (range: 1-7, 1 is Monday)
+//         | | | +--- Month of the Year (range: 1-12)
+//         | | +----- Day of the Month  (range: 1-31)
+//         | +------- Hour              (range: 0-23)
+//         +--------- Minute            (range: 0-59)
+Resources
+crontab.guru
+
+JavaScript Date Object
