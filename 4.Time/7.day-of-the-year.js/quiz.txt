@@ -1,0 +1,39 @@
+This project focuses on working with dates and calendar arithmetic. You’ll build a function that determines the ordinal day of the year — that is, how many days have passed since January 1st of the same year, including the given date.
+
+Role Play
+You’re helping design a time-tracking system for an environmental monitoring program that records data by day number rather than date (e.g., “Day 32 of 2025”). Your task is to write a function that calculates this “day of the year” for any given Date object, so reports and logs stay consistent across leap and non-leap years.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to perform date subtraction in JavaScript.
+
+How to calculate elapsed days between two dates.
+
+How to handle leap years automatically using the built-in Date object.
+
+How to convert time differences from milliseconds to days.
+
+Instructions
+General
+Create a function named dayOfTheYear that:
+
+Accepts a Date object as an argument.
+
+Returns a number representing how many days have passed since January 1st of that same year, including the given day.
+
+January 1st should return 1, not 0.
+
+Tip: Create a new Date representing January 1st of the given date’s year and calculate the difference between the two dates. Note: Convert the difference from milliseconds to days using 1000 * 60 * 60 * 24.
+
+Example
+console.log(dayOfTheYear(new Date("2024-01-01"))); // 1
+console.log(dayOfTheYear(new Date("2024-02-01"))); // 32 (31 days in January + 1)
+console.log(dayOfTheYear(new Date("2024-12-31"))); // 366 (leap year)
+console.log(dayOfTheYear(new Date("2023-12-31"))); // 365 (non-leap year)
+Resources
+JavaScript Date Object
+
+Working with Time in JavaScript
+
+Leap Year Calculation
