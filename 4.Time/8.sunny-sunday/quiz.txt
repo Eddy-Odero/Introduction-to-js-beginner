@@ -1,0 +1,45 @@
+This project challenges you to manipulate the concept of time by redefining the seven-day week into a six-day week — removing Sundays completely. You’ll write a function that determines what day of this new six-day calendar a given date falls on.
+
+Role Play
+You’ve been recruited by a futuristic society that decided Sundays are no longer needed — productivity and sunshine take priority! Your mission is to rewrite the weekly system so that each week runs from Monday to Saturday, effectively skipping Sundays from the flow of time.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to calculate day offsets using the Date object.
+
+How to map standard 7-day week logic into a custom week system.
+
+How to use modulo arithmetic to loop through repeating day cycles.
+
+How to reinterpret time in a computational and creative way.
+
+Instructions
+General
+Create a function named sunnySunday that:
+
+Takes a Date object as an argument.
+
+Returns a string representing the day of the week according to the new six-day system.
+
+The first day (01/01/0001) is considered Monday.
+
+The week includes only the days:
+
+Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Every seventh day (traditional Sunday) is removed from the timeline.
+
+Tip: You can calculate the total number of days since 01/01/0001 and then skip every 7th day by adjusting the count. Note: Be careful with leap years — JavaScript’s Date object already handles them automatically.
+
+Example
+console.log(sunnySunday(new Date("0001-01-01"))); // "Monday"
+console.log(sunnySunday(new Date("0001-01-02"))); // "Tuesday"
+console.log(sunnySunday(new Date("0001-01-06"))); // "Saturday"
+console.log(sunnySunday(new Date("0001-01-07"))); // "Monday" (since Sunday is removed)
+console.log(sunnySunday(new Date("0001-01-08"))); // "Tuesday"
+Resources
+JavaScript Date Object
+
+Working with Dates
+
+Modulo Operator (%)
