@@ -1,0 +1,78 @@
+This project focuses on implementing a custom date formatter that follows the rules described in the Unicode Technical Standard #35. You’ll write a format function that converts a given Date object into a formatted string, interpreting tokens like yyyy, MMM, or HH to represent different date and time components.
+
+Role Play
+You’re working on an internationalized calendar and reporting system. Instead of using libraries like date-fns or moment.js, your team wants a lightweight, self-contained date formatter that complies with Unicode TR35 standards. Your task is to implement this custom formatting engine that can adapt to multiple date and time symbols.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to extract and format date components using JavaScript’s Date API.
+
+How to handle multiple token formats (e.g., M, MM, MMM, MMMM).
+
+How to handle string token replacement safely and dynamically.
+
+How to work with time cycles (12-hour vs 24-hour) and AM/PM indicators.
+
+Instructions
+General
+Create a function named format that:
+
+Accepts two arguments:
+
+A valid Date object.
+
+A format string that specifies how the date should be formatted.
+
+Returns a string representing the date formatted according to the pattern.
+
+Must handle the following tokens:
+
+Token	Meaning	Example
+y	Year (no padding)	1985
+yyyy	4-digit year	1985
+G	Era (short)	AD
+GGGG	Era (long)	Anno Domini
+M	Month (numeric)	1
+MM	Month (2-digit)	01
+MMM	Month (short text)	Jan
+MMMM	Month (long text)	January
+d	Day of month (no padding)	7
+dd	Day of month (2-digit)	07
+E	Day of week (short)	Mon
+EEEE	Day of week (long)	Monday
+h	Hour (1–12)	3
+hh	Hour (1–12, 2-digit)	03
+H	Hour (0–23)	15
+HH	Hour (0–23, 2-digit)	15
+m	Minute	8
+mm	Minute (2-digit)	08
+s	Second	19
+ss	Second (2-digit)	19
+a	AM/PM	AM
+Tip: Use arrays for month and weekday names to handle text-based tokens. Note: Non-token characters (like brackets, parentheses, or symbols) should remain as-is in the output.
+
+Years before year 1 (BC)
+Dates can fall before year 1 (e.g. new Date(-585, 4, 28)). For those:
+
+The year tokens (y, yyyy) use the absolute value of the year, 585, padded to 0585 for yyyy.
+
+The era token is BC for G and Before Christ for GGGG (versus AD / Anno Domini for years >= 1).
+
+Example
+const d = new Date("7 January 1985, 3:08:19");
+
+console.log(format(d, "HH(mm)ss [dd] <MMM>"));
+// Output: '03(08)19 [07] <Jan>'
+
+console.log(format(d, "EEEE, MMMM d, yyyy G"));
+// Output: 'Monday, January 7, 1985 AD'
+
+console.log(format(d, "h:mm:ss a"));
+// Output: '3:08:19 AM'
+Resources
+Unicode Date Field Symbol Table
+
+JavaScript Date Methods
+
+String.padStart()
