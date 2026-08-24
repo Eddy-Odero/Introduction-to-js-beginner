@@ -1,0 +1,42 @@
+In this project, you’ll recreate the flow() function from Lodash — a utility that allows you to compose multiple functions into a single operation. This helps you build modular, reusable, and readable code by chaining function executions where the output of one function becomes the input of the next.
+
+Role Play
+Imagine you’re building your own lightweight functional utility library inspired by Lodash. You want to give developers the ability to chain functions together easily, allowing complex operations to be expressed as simple, readable pipelines. The flow() function will be the key to enabling that functionality.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement function composition in JavaScript.
+
+Pass data through multiple functions sequentially.
+
+Work with higher-order functions that return other functions.
+
+Understand how to manage variable argument inputs dynamically.
+
+Instructions
+General
+Create a function named flow that behaves like _.flow([funcs]) from Lodash.
+
+It should take an array of functions as its only argument.
+
+It should return a new function that:
+
+Accepts any number of arguments.
+
+Passes those arguments to the first function.
+
+Then, passes the result successively through each remaining function.
+
+Example
+const square = (nbr) => nbr * nbr;
+const add2Numbers = (nbr1, nbr2) => nbr1 + nbr2;
+
+const flowedFunctions = flow([add2Numbers, square]);
+flowedFunctions(2, 3); // -> 25
+Resources
+Lodash flow
+
+Function composition
+
+Higher-order functions

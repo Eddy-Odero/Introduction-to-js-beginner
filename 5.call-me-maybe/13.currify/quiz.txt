@@ -1,0 +1,44 @@
+In this project, you’ll build a currify function that can transform any regular function into a curried version — a function that takes one argument at a time and returns another function until all arguments are provided. This exercise deepens your understanding of how closures and higher-order functions enable flexible, reusable code in functional programming.
+
+Role Play
+Imagine you’re designing a functional programming helper library that allows developers to easily convert standard multi-argument functions into curried ones. This utility will help them compose functions more elegantly and partially apply arguments as needed, without altering the original function’s logic.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement a function currying utility that works for any function.
+
+Use closures to remember previous arguments.
+
+Handle variable function arity dynamically.
+
+Strengthen your understanding of functional composition and partial application.
+
+Instructions
+General
+Create a function named currify that transforms any given function into a curried version of itself.
+
+It should take a function as an argument.
+
+It should return a new function that:
+
+Accepts one argument at a time.
+
+Returns another function until all expected parameters have been provided.
+
+Once all arguments are collected, executes the original function.
+
+Example
+const mult2 = (el1, el2) => el1 * el2;
+console.log(mult2(2, 2)); // -> 4
+
+const mult2Curried = currify(mult2);
+console.log(mult2Curried(2)(2)); // -> 4
+// Same result, achieved through currying.
+Resources
+What is currying? (Stack Overflow)
+
+Currying in JavaScript
+
+Functional programming concepts
+
