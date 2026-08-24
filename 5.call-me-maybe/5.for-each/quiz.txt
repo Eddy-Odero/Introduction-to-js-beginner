@@ -1,0 +1,38 @@
+In this project, you’ll implement your own version of the Array.prototype.forEach() method. This exercise helps you understand how iteration works internally in JavaScript and how higher-order functions receive callbacks for each array element.
+
+Role Play
+Imagine you’re building a custom JavaScript runtime from scratch, and one of your tasks is to implement the fundamental array iteration methods. To start, you’ll recreate forEach, ensuring it behaves exactly like the native implementation — calling a function once for every element in an array.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement a custom version of forEach().
+
+Work with callbacks and function arguments.
+
+Understand how array iteration works under the hood.
+
+Apply functional programming techniques in JavaScript.
+
+Instructions
+General
+Create a function named forEach that:
+
+Takes an array as the first argument.
+
+Takes a function (callback) as the second argument.
+
+Executes the callback for each element of the array, just like the built-in Array.prototype.forEach() method.
+
+Your function should not return a new array — it should simply apply the callback to each element.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+Array.prototype.forEach = undefined;
+Resources
+Array.prototype.forEach
+
+Callbacks in JavaScript
+
+Understanding higher-order functions

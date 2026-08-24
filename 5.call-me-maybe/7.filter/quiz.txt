@@ -1,0 +1,45 @@
+In this project, you’ll implement three core filtering utilities — filter, reject, and partition. These functions are fundamental to data processing in JavaScript and functional programming, helping you select, exclude, or separate elements in an array based on specific conditions.
+
+Role Play
+Imagine you’re designing a custom utility library similar to Lodash or Underscore.js. Your task is to reimplement some of their most essential array-handling functions — this time from scratch — to gain a deeper understanding of how filtering logic and predicate functions work internally.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement a custom filter() method from scratch.
+
+Use predicate functions to control which elements are included or excluded.
+
+Recreate reject() and partition() functions inspired by Lodash.
+
+Strengthen your grasp of functional array manipulation in JavaScript.
+
+Instructions
+General
+Create the following functions. Each function takes an array as the first argument and a function (predicate) as the second argument.
+
+filter
+Create a function named filter that works like the native Array.prototype.filter() method — returning a new array containing only the elements for which the predicate returns true.
+
+reject
+Create a function named reject that works like Lodash’s reject() — returning a new array containing only the elements for which the predicate returns false.
+
+partition
+Create a function named partition that works like Lodash’s partition() — returning an array of two arrays:
+
+The first contains elements where the predicate returned true.
+
+The second contains elements where the predicate returned false.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+Array.prototype.filter = undefined;
+Resources
+Array.prototype.filter
+
+Lodash reject
+
+Lodash partition
+
+Functional programming concepts

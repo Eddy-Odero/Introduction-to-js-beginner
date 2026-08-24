@@ -1,0 +1,50 @@
+In this project, you’ll recreate the core functionality of the map() and flatMap() methods. These methods are essential tools in functional programming, allowing you to transform and flatten arrays efficiently. Implementing them manually will help you understand how array transformations work internally.
+
+Role Play
+Imagine you’re developing your own lightweight JavaScript framework that needs to include core array utilities. To ensure maximum compatibility, you’ll write your own versions of map() and flatMap() from scratch — mimicking their behavior while handling different kinds of data transformations.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement map() and flatMap() manually.
+
+Understand the relationship between mapping and flattening.
+
+Use callback functions to transform array elements.
+
+Gain insight into how built-in array methods process data internally.
+
+Instructions
+General
+Create the following functions:
+
+map
+Create a function named map that:
+
+Takes an array as the first argument.
+
+Takes a function as the second argument.
+
+Returns a new array containing the results of applying the function to each element, just like Array.prototype.map().
+
+flatMap
+Create a function named flatMap that:
+
+Takes an array as the first argument.
+
+Takes a function as the second argument.
+
+Applies the function to each element, then flattens the result by one level — replicating Array.prototype.flatMap() behavior.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+Array.prototype.map = undefined;
+Array.prototype.flatMap = undefined;
+Array.prototype.flat = undefined;
+Resources
+Array.prototype.map
+
+Array.prototype.flatMap
+
+Array.prototype.flat
