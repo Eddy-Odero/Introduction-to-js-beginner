@@ -1,0 +1,38 @@
+In this project, you’ll practice the concept of currying — a functional programming technique where a function that takes multiple arguments is transformed into a sequence of functions that each take a single argument. You’ll apply this idea to basic arithmetic operations to understand how currying changes function structure and invocation.
+
+Role Play
+Imagine you’re creating a functional programming toolkit for developers who prefer composing operations step by step. Instead of writing functions that take multiple arguments at once, you’ll build curried functions that allow partial application, giving users greater flexibility and reusability in their code.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement curried functions that take one argument at a time.
+
+Apply the concept of partial application in JavaScript.
+
+Understand how function chaining can replace multi-argument calls.
+
+Strengthen your foundation in functional programming concepts.
+
+Instructions
+General
+Create the following functions using the currying process. Each function must accept only one argument at a time.
+
+mult2
+A curried function that multiplies two numbers.
+
+mult2(3)(4); // -> 12
+add3
+A curried function that adds three numbers.
+
+add3(2)(4)(6); // -> 12
+sub4
+A curried function that subtracts four numbers in sequence, performing the operations in order: first number - second number - third number - fourth number.
+
+sub4(20)(5)(3)(2); // -> 10
+Resources
+What is currying? (Stack Overflow)
+
+Currying in JavaScript
+
+Functional programming concepts

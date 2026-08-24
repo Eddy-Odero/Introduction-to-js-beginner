@@ -1,0 +1,49 @@
+n this project, you’ll learn how to use closures to create functions that remember their surrounding state. You’ll build a function generator that produces new functions capable of checking whether a given city belongs to a specific country — an exercise that demonstrates how data can be encapsulated and reused elegantly in JavaScript.
+
+Role Play
+Imagine you’re developing a travel assistant app that can answer quick geographical questions. To make it efficient, you want to generate specialized functions for each country that can instantly tell users whether a city belongs to that country. You’ll use closures to keep each country’s city list in memory without needing to pass it repeatedly.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use closures to preserve data within generated functions.
+
+Create function factories that return specialized functions.
+
+Apply dynamic string interpolation to generate descriptive messages.
+
+Understand how scoping works in JavaScript when returning functions.
+
+Instructions
+General
+Create a function named hasCity that:
+
+Takes two arguments:
+
+A string called country.
+
+An array of strings representing the cities of that country.
+
+Returns a new function that:
+
+Accepts a string called city.
+
+Checks if that city exists in the provided array of cities.
+
+Returns one of the following strings:
+
+"<city> is a city from <country>"
+
+"<city> is not a city from <country>"
+
+Example
+const isFrenchCity = hasCity("France", ["Paris", "Lyon", "Marseille"]);
+
+isFrenchCity("Paris"); // -> "Paris is a city from France"
+isFrenchCity("Berlin"); // -> "Berlin is not a city from France"
+Resources
+Closures in JavaScript
+
+Higher-order functions
+
+Template literals
