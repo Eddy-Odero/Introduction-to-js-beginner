@@ -1,0 +1,75 @@
+In this project, you’ll practice using the powerful Array.prototype.map() method to transform and manipulate arrays of data. This exercise focuses on functional programming concepts and helps you understand how to process collections efficiently without mutating the original data.
+
+Role Play
+Imagine you’re building a weather dashboard for a travel app. You need to transform raw weather data — such as temperatures, city names, and state information — into clean, human-readable formats that can be easily displayed on screen. Your task is to write a set of utility functions using map() to process this data consistently.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use the map() method to iterate and transform arrays.
+
+Work with objects and strings in array transformations.
+
+Format and clean raw data for real-world use cases.
+
+Apply functional programming practices in JavaScript.
+
+Instructions
+General
+Create the following functions to manipulate and transform data.
+
+Your solutions must use the map() method.
+
+Cities Only
+citiesOnly: accepts an array of objects and returns an array of city names (strings) extracted from the city key.
+
+citiesOnly([
+  {
+    city: "Los Angeles",
+    temperature: "  101 °F   ",
+  },
+  {
+    city: "San Francisco",
+    temperature: " 84 ° F   ",
+  },
+]);
+// -> ['Los Angeles', 'San Francisco']
+Upper Casing States
+upperCasingStates: accepts an array of state names as strings, and returns a new array where each word is capitalized.
+
+upperCasingStates(["alabama", "new jersey"]);
+// -> ['Alabama', 'New Jersey']
+Fahrenheit to Celsius
+fahrenheitToCelsius: accepts an array of temperatures in Fahrenheit (as strings) and returns a new array converted to Celsius, rounded down.
+
+fahrenheitToCelsius(["68°F", "59°F", "25°F"]);
+// -> ['20°C', '15°C', '-4°C']
+Trim Temp
+trimTemp: accepts an array of objects and returns a new array with identical structure, but all temperature strings must have their spaces removed.
+
+trimTemp([
+  { city: "Los Angeles", temperature: "  101 °F   " },
+  { city: "San Francisco", temperature: " 84 ° F   " },
+]);
+/* -> [
+  { city: 'Los Angeles', temperature: '101°F' },
+  { city: 'San Francisco', temperature: '84°F' },
+] */
+Temp Forecasts
+tempForecasts: accepts an array of objects and returns an array of formatted strings that describe the forecast for each city.
+
+tempForecasts([
+  {
+    city: "Pasadena",
+    temperature: " 101 °F",
+    state: "california",
+    region: "West",
+  },
+]);
+// -> ['38°Celsius in Pasadena, California']
+Resources
+Array.prototype.map
+
+String manipulation in JavaScript
+
+JavaScript Math methods
