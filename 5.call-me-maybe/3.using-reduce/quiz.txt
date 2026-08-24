@@ -1,0 +1,45 @@
+In this project, you’ll practice using the Array.prototype.reduce() method to accumulate values and perform calculations on arrays. This exercise helps you master one of JavaScript’s most powerful higher-order functions by applying it to summation, conditional operations, and function execution.
+
+Role Play
+Imagine you’re building a lightweight computation engine for a data analysis tool. Instead of using multiple loops, you decide to optimize your operations with reduce(). Your goal is to implement versatile reduction logic that can sum numbers, mix arithmetic operations, or execute a chain of functions dynamically.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use the reduce() method to combine array values into a single result.
+
+Apply conditional logic within reducers.
+
+Execute a sequence of functions using functional programming principles.
+
+Manage initial values and accumulators effectively.
+
+Instructions
+General
+Create the following functions.
+
+Your solutions must use reduce.
+
+adder
+Accepts an array of numbers and returns the total sum as a single number.
+
+sumOrMul
+Accepts an array of numbers and combines its elements by:
+
+Adding odd numbers.
+
+Multiplying even numbers.
+
+It should return the final result as a number.
+
+sumOrMul([1, 2, 3, 5, 8], 5);
+// (((((5 + 1) * 2) + 3) + 5) * 8) -> 160
+funcExec
+Accepts an array of functions and executes them in sequence using reduce, returning the final result. Each function may accept an optional argument, which serves as the initial value for the execution.
+
+Resources
+Array.prototype.reduce
+
+Functional programming concepts
+
+Working with higher-order functions

@@ -1,0 +1,51 @@
+In this project, you’ll explore the Array.prototype.filter() method to create functions that extract elements from arrays based on specific conditions. This exercise helps you understand how to work with array filtering logic and apply predicates to return subsets of data efficiently.
+
+Role Play
+Imagine you’re developing an analytics tool that processes lists of U.S. states and related information. Your job is to filter these datasets to extract only the relevant entries based on different conditions — like name length, vowels, or region. You’ll use the filter() method to handle all of these transformations.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use the filter() method to select specific elements from arrays.
+
+Work with strings and objects to define filtering conditions.
+
+Build complex filtering logic with multiple constraints.
+
+Understand how to apply functional programming patterns to real-world data.
+
+Instructions
+General
+Create the following functions.
+
+Your solutions must use filter.
+
+filterShortStateName
+Accepts an array of strings and returns only those strings that contain fewer than 7 characters.
+
+filterStartVowel
+Accepts an array of strings and returns only those that start with a vowel (a, e, i, o, u).
+
+filter5Vowels
+Accepts an array of strings and returns only those that contain at least 5 vowels of any type (a, e, i, o, u).
+
+filter1DistinctVowel
+Accepts an array of strings and returns only those that contain only one distinct vowel. For example, "Alabama" contains only one distinct vowel "a".
+
+multiFilter
+Accepts an array of objects and returns only those that satisfy all of the following conditions:
+
+The key capital contains at least 8 characters.
+
+The key name does not start with a vowel.
+
+The key tag contains at least one vowel.
+
+The key region is not "South".
+
+Resources
+Array.prototype.filter
+
+JavaScript string methods
+
+Regular expressions in JavaScript

@@ -1,0 +1,35 @@
+In this project, you’ll practice using the Array.prototype.every() and Array.prototype.some() methods to evaluate arrays based on conditions. These functions help you test whether all, some, or none of the elements in an array meet specific criteria — a core concept in functional programming and data validation.
+
+Role Play
+Imagine you’re developing a word analysis tool for a writing assistant app. Your program needs to verify whether words in a sentence meet certain length requirements — for example, detecting overly long words or confirming that every word is long enough. You’ll use array condition methods to perform these checks efficiently.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use every() to check if all array elements meet a condition.
+
+Use some() to verify if at least one element matches a rule.
+
+Combine these methods to express logical “all,” “any,” and “none” scenarios.
+
+Validate string properties like length through concise array operations.
+
+Instructions
+General
+Create three functions, each accepting an array as an argument.
+
+longWords
+Returns true if every element of the array is a string with at least 5 characters.
+
+oneLongWord
+Returns true if at least one element of the array is a string with 10 or more characters.
+
+noLongWords
+Returns true if there are no elements in the array that are strings with at least 7 characters.
+
+Resources
+Array.prototype.every
+
+Array.prototype.some
+
+JavaScript string length
