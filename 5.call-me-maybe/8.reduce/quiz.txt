@@ -1,0 +1,60 @@
+In this project, you’ll implement four versions of reduction functions — fold, foldRight, reduce, and reduceRight. These are foundational tools in functional programming that allow you to accumulate values across arrays in different directions, giving you full control over iteration flow and initial values.
+
+Role Play
+Imagine you’re building your own JavaScript runtime or functional utility library, and you need to reimplement core array reduction methods from scratch. This means you’ll have to handle accumulator logic manually and manage left-to-right and right-to-left iteration without relying on built-in methods.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement left and right reduction logic.
+
+Manage accumulators and handle initial values safely.
+
+Reproduce the behavior of JavaScript’s reduce() and reduceRight().
+
+Apply functional programming techniques to sequence transformations.
+
+Instructions
+General
+Create the following four functions.
+
+The use of [].reduce and [].reduceRight is forbidden for this exercise.
+
+fold
+Receives an array, a function, and an accumulator (in that order). Applies the function to each element of the array from left to right, combining them into a single value.
+
+const adder = (a, b) => a + b;
+fold([1, 2, 3], adder, 2);
+// returns 8 (2 + 1 + 2 + 3)
+foldRight
+Receives an array, a function, and an accumulator (in that order). Applies the function to each element from right to left.
+
+foldRight([1, 2, 3], adder, 2);
+// returns 8 (2 + 3 + 2 + 1)
+reduce
+Works like the native Array.prototype.reduce() without specifying an accumulator.
+
+Takes an array and a function as arguments.
+
+The starting value of the accumulator must be the first element of the array.
+
+If the array has fewer than 1 element, it should throw an error.
+
+reduce([1, 2, 3], adder);
+// returns 6 (1 + 2 + 3)
+reduceRight
+Similar to reduce, but processes elements from right to left.
+
+reduceRight([1, 2, 3], adder);
+// returns 6 (3 + 2 + 1)
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+Array.prototype.reduce = undefined;
+Array.prototype.reduceRight = undefined;
+Resources
+Array.prototype.reduce
+
+Functional programming concepts
+
+Accumulator patterns in JavaScript

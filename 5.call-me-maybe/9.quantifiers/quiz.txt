@@ -1,0 +1,41 @@
+In this project, you’ll reimplement three fundamental array quantifier functions — every, some, and none. These functions allow you to test whether all, some, or none of the elements in an array satisfy a given condition. You’ll build them manually to deepen your understanding of iteration and logical evaluation in JavaScript.
+
+Role Play
+Imagine you’re building a custom JavaScript runtime or utility library where native array methods aren’t available. You’ve been tasked with re-creating core quantifier functions to enable powerful, condition-based checks on arrays — essential for validation, filtering, and logical data analysis.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Implement universal, existential, and negation quantifiers in code.
+
+Replicate the logic of every() and some() without using them.
+
+Combine iteration and conditional logic to evaluate arrays.
+
+Strengthen your understanding of boolean logic in functional programming.
+
+Instructions
+General
+Create the following functions. Each should accept an array and a function as arguments. Each function evaluates the elements of the array based on the condition provided by the callback.
+
+The use of [].every and [].some is forbidden for this exercise.
+
+every
+Returns true if every element in the array satisfies the condition defined by the function.
+
+some
+Returns true if at least one element in the array satisfies the condition defined by the function.
+
+none
+Returns true if none of the elements in the array satisfy the condition defined by the function.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+Array.prototype.some = Array.prototype.every = undefined;
+Resources
+Array.prototype.some
+
+Array.prototype.every
+
+JavaScript control flow and error handling
