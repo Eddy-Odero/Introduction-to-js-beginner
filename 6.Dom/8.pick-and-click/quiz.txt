@@ -1,0 +1,91 @@
+In this project, you’ll transform the entire browser window into a live HSL color picker controlled by your mouse. As you move your cursor across the screen, the page’s background color will change dynamically, and you’ll see real-time values for hue, luminosity, and the full hsl() value. Clicking anywhere will copy the current color value to your clipboard.
+
+Role Play
+Imagine you’re a digital artist working on a web-based color mixing tool. Your goal is to let users “paint with motion” — using mouse position to control the color spectrum. The horizontal axis defines the hue, the vertical axis controls the brightness, and clicking on the canvas locks in the perfect color for later use.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use mouse events to track real-time cursor positions.
+
+Manipulate CSS color values dynamically.
+
+Update the DOM with live data.
+
+Copy text to the clipboard programmatically.
+
+Interact with SVG elements to create crosshair guides.
+
+Instructions
+General
+Write a function named pick that makes the screen behave as an HSL color picker. The background color and displayed values should update in real time as the mouse moves.
+
+Behavior
+Background Color
+
+The background of the body should change dynamically based on the mouse position:
+
+X-axis (horizontal) controls the hue (0–360).
+
+Y-axis (vertical) controls the luminosity (0–100).
+
+Use the format:
+
+hsl(<hue>, 50%, <luminosity>%)
+Both hue and luminosity values must be rounded using Math.round().
+
+Displayed Values Display three values on the screen:
+
+A div with the class hsl in the center — shows the full HSL value (hsl(45, 50%, 35%)).
+
+A div with the classes hue text — positioned at the top right of the screen.
+
+A div with the classes luminosity text — positioned at the bottom left of the screen.
+
+Clipboard Copy
+
+When the mouse is clicked, copy the current HSL value to the clipboard.
+
+Crosshair Lines
+
+Two SVG lines follow the cursor, forming long crosshairs:
+
+Line with id axisX → vertical line following X position (x1 and x2 equal to clientX).
+
+Line with id axisY → horizontal line following Y position (y1 and y2 equal to clientY).
+
+These should update dynamically with each mouse move.
+
+Example Behavior
+Moving the mouse changes the background and updates displayed text:
+
+hsl(200, 50%, 40%)
+Hue: 200
+Luminosity: 40
+Clicking the mouse copies:
+
+hsl(200, 50%, 40%)
+to the clipboard.
+
+Files
+You only need to create and submit pick-and-click.js. You are provided the following files for local testing:
+
+pick-and-click.html — open in your browser to test your color picker.
+
+pick-and-click.data.css — optional styling file for layout and design.
+
+Expected Result
+🎬 Watch the expected behavior here: Expected Result Video
+
+Resources
+Copy event
+
+Mousemove event
+
+SVG element
+
+createElementNS()
+
+setAttribute()
+
+HSL color values

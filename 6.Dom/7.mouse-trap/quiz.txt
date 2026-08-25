@@ -1,0 +1,88 @@
+In this project, you’ll combine mouse events, DOM manipulation, and collision detection to create an interactive trap on your webpage. You’ll generate moving circles that follow the mouse, and once they enter a central box, they’ll change color and become trapped — simulating a “mouse trap” where your cursor’s creations get caught.
+
+Role Play
+Imagine you’re a digital scientist experimenting with kinetic particles on a web canvas. Each time you click, a new particle (circle) appears. When you move your mouse, the newest circle follows your movements. But beware — at the center of your screen lies a trap! Once a particle crosses into this invisible box, it turns purple and becomes permanently confined inside, never to escape again.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use event listeners (click, mousemove) to respond to user actions.
+
+Dynamically create and manipulate DOM elements.
+
+Control element position based on mouse coordinates.
+
+Detect element boundaries using getBoundingClientRect().
+
+Handle state changes (trapped vs. free objects) in real time.
+
+Instructions
+General
+Implement the following three functions to complete the behavior:
+
+createCircle
+Fires on every click on the page.
+
+Creates a new <div> element positioned at the mouse’s location.
+
+The new element should:
+
+Have the class circle.
+
+Have a white background (background: white).
+
+Each circle should appear where the user clicks.
+
+moveCircle
+Fires when the mouse moves on the page.
+
+Retrieves the last created circle and updates its position to follow the mouse’s current coordinates.
+
+Only the most recently created circle should move.
+
+setBox
+Creates a box (<div>) in the center of the page with the class box.
+
+The box acts as a trap:
+
+When a circle is entirely inside the box (not touching or overlapping its 1px borders), it should turn purple (background: var(--purple)).
+
+Once trapped, the circle cannot move anymore — it stays locked inside the box.
+
+💡 Hint: Use getBoundingClientRect() to detect positions and ensure that circles are strictly inside the box boundaries (no overlap).
+
+Example Behavior
+Click → a white circle appears where you clicked.
+
+Move the mouse → the newest circle follows your cursor.
+
+If the circle enters the central box → it turns purple and stops moving.
+
+Click again → a new circle is created and follows your mouse.
+
+Files
+You only need to create and submit mouse-trap.js. You are provided the following files for local testing:
+
+mouse-trap.html — open in your browser to test your functions.
+
+mouse-trap.data.css — optional CSS file defining styles for circles and the box.
+
+Expected Result
+🎬 Watch the expected behavior here: Expected Result Video
+
+Resources
+addEventListener
+
+removeEventListener
+
+MouseEvent
+
+click event
+
+mousemove event
+
+clientX
+
+clientY
+
+getBoundingClientRect
