@@ -1,0 +1,84 @@
+In this project, you’ll explore DOM manipulation and HTML element selection in JavaScript. You’ll create functions that search through the document structure to locate specific elements, classify them into groups, and ultimately find a single target — the architect Bonanno Pisano, responsible for designing the Tower of Pisa.
+
+This exercise strengthens your understanding of the DOM API, element selection methods, and array structuring based on element properties and classes.
+
+Role Play
+You’ve traveled back in time to prevent the construction of the Leaning Tower of Pisa. Inside a grand hall filled with architects and others, you must use your investigative skills — and JavaScript — to identify the main architect, Bonanno Pisano. You’ll gradually narrow down suspects using DOM queries until only your target remains.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Use DOM selection methods such as getElementsByTagName, getElementsByClassName, and getElementById.
+
+Work with HTMLCollections, NodeLists, and convert them into arrays.
+
+Filter and categorize HTML elements based on tags, classes, and IDs.
+
+Use CSS selectors and pseudo-classes like :not() effectively.
+
+Export functions for modular JavaScript testing.
+
+Instructions
+General
+Launch the provided HTML file in a browser to begin your investigation. At the top of the page, you’ll find four buttons, each linked to a function that you must implement in the JavaScript file.
+
+You must write and export the following functions:
+
+getArchitects
+Returns an array containing two arrays of HTML elements:
+
+The first array contains all architects (<a> tags).
+
+The second array contains all non-architects (every other element).
+
+getClassical
+Returns an array containing two arrays of HTML elements:
+
+The first array contains architects that belong to the classical class.
+
+The second array contains architects that are not classical.
+
+getActive
+Returns an array containing two arrays of HTML elements:
+
+The first array contains active classical architects.
+
+The second array contains non-active classical architects.
+
+getBonannoPisano
+Returns an array containing:
+
+The HTML element representing the architect whose id is "BonannoPisano".
+
+An array containing all other active classical architects (excluding Bonanno Pisano).
+
+Example of Function Export
+All functions must be exported to be tested properly:
+
+export const getArchitects = () => { ... }
+export const getClassical = () => { ... }
+export const getActive = () => { ... }
+export const getBonannoPisano = () => { ... }
+Files
+You only need to create and submit the JavaScript file get-them-all.js. The following files are provided for you to work with:
+
+get-them-all.html — the main page to open in your browser.
+
+Contains pre-styled elements and buttons to trigger your functions.
+
+get-them-all.data.js — generates the content used in the HTML.
+
+get-them-all.data.css — contains prewritten styles that you can use or modify freely.
+
+Resources
+HTML Element
+
+getElementsByTagName()
+
+getElementsByClassName()
+
+getElementById()
+
+querySelectorAll()
+
+CSS :not() pseudo-class
