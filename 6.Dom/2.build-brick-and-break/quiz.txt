@@ -1,0 +1,78 @@
+In this project, you’ll use DOM manipulation, timed events, and custom data attributes to build and interact with a visual brick tower on a webpage. You’ll learn to dynamically create elements, update their attributes, and remove them — simulating construction, maintenance, and destruction using JavaScript.
+
+Role Play
+You’ve just joined a team of digital architects responsible for building a virtual brick tower. Your mission: construct the tower piece by piece, maintain the structure when it’s damaged, and demolish it when necessary. Equipped only with JavaScript and a few emojis 🔨🧨 as your tools, you must manage your construction site with precision and timing.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Dynamically create and manipulate DOM elements.
+
+Use timers (setInterval / clearInterval) to control creation sequences.
+
+Work with custom data attributes (data-*) for tracking state.
+
+Modify and remove elements efficiently through the DOM API.
+
+Handle user interactions via event-triggered functions.
+
+Instructions
+General
+You must implement three main functions: build, repair, and destroy. Open the provided HTML file in your browser to view and test your implementation.
+
+build
+Creates and displays the specified number of bricks, each represented by a <div> element.
+
+Each brick must:
+
+Be created at a regular interval of 100 ms.
+
+Receive a unique id in the following format:
+
+<div id="brick-1"></div>
+The tower should have three columns:
+
+The middle column bricks must include a custom data attribute foundation="true".
+
+repair
+Triggered by clicking the 🔨 emoji. Implements the logic for repairing specific bricks.
+
+The function receives any number of brick IDs.
+
+For each id, retrieve the corresponding HTML element.
+
+Then:
+
+If the brick is in the middle column (foundation set to true), set the custom attribute repaired="in progress".
+
+Otherwise, set repaired="true".
+
+destroy
+Triggered by clicking the 🧨 emoji. This function removes the last brick currently in the tower.
+
+Expected Result
+You can watch an example of the expected behavior here: 🎬 Expected Result Video
+
+Files
+You only need to create and submit build-brick-and-break.js. You are provided with the following files to download and test locally:
+
+build-brick-and-break.html — open this file in your browser to test your work.
+
+build-brick-and-break.data.css — provides styles for your project (optional to modify).
+
+Resources
+Document.createElement()
+
+ParentNode.append()
+
+Element Interface
+
+setInterval() / clearInterval()
+
+Element.hasAttribute()
+
+HTMLElement.dataset
+
+Using data-* attributes
+
+ChildNode.remove()

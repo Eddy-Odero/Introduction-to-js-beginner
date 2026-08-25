@@ -1,0 +1,63 @@
+In this project, you’ll use DOM manipulation and style properties to generate a visual eye chart inspired by the Monoyer chart used by ophthalmologists. You’ll dynamically create and style a series of letters that grow progressively larger, bolder, and more visually striking — testing both your JavaScript and your friend’s vision!
+
+Role Play
+A friend, stuck at home and looking for entertainment, wants to measure their eyesight using a homemade digital eye chart. You’ve been asked to develop this tool — a board of random uppercase letters that increase in size and boldness, making each one “harder, bigger, bolder, and stronger” than the last.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Dynamically create and style DOM elements using JavaScript.
+
+Manipulate inline styles programmatically.
+
+Use randomization to generate characters.
+
+Apply progressive visual styling to elements in sequence.
+
+Work with font-weight and font-size to create visual hierarchy.
+
+Instructions
+General
+Create a function named generateLetters that dynamically creates and displays 120 div elements on the page. Each div represents a letter with progressively increasing visual properties.
+
+Specifications
+Create 120 div elements, each containing one random uppercase letter (A–Z).
+
+The font-size of the letters should increase linearly from 11px (smallest) to 130px (largest).
+
+The font-weight of the letters should change depending on their position:
+
+First third (1–40): font-weight = 300
+
+Second third (41–80): font-weight = 400
+
+Last third (81–120): font-weight = 600
+
+Append each div to the page (e.g., to the body or a container element).
+
+Each letter’s text content must be a random uppercase character.
+
+Example
+generateLetters();
+// Creates 120 <div> elements like:
+// <div style="font-size: 11px; font-weight: 300;">A</div>
+// <div style="font-size: 12px; font-weight: 300;">G</div>
+// ...
+// <div style="font-size: 130px; font-weight: 600;">Z</div>
+Files
+You only need to create and submit harder-bigger-bolder-stronger.js. You are provided the following files to test your project locally:
+
+harder-bigger-bolder-stronger.html — open in your browser to test your implementation.
+
+harder-bigger-bolder-stronger.data.css — optional CSS file for base styling.
+
+Resources
+Document.createElement()
+
+ParentNode.append()
+
+Element.style
+
+Node.textContent
+
+Working with fonts and font-weight
