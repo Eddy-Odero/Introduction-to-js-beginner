@@ -1,0 +1,66 @@
+In this project, you’ll manipulate the CSS classes of an HTML element dynamically to create an interactive button that changes style with every click. You’ll progressively “pimp” the button by adding styles one by one, and then reverse the process by removing them — all while toggling an extra class to mark when it’s in the “unpimping” phase.
+
+Role Play
+You’re a digital stylist hired to transform a plain, sad button into a fashionable, animated centerpiece. Each click on the page adds a layer of flair — new colors, shadows, and shapes — until the button reaches its most extravagant form. After that, you’ll remove those styles one by one to bring it back to simplicity, repeating the cycle endlessly.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Dynamically modify DOM element classes with JavaScript.
+
+Use classList.add(), classList.remove(), and classList.toggle() effectively.
+
+Manage state transitions between styling and un-styling phases.
+
+Import and use data arrays from external JavaScript files.
+
+Instructions
+General
+A button element is provided on the page:
+
+<button class="button">pimp my style</button>
+Each click on the page triggers the pimp function. You must implement the logic inside this function to update the button’s classes according to the rules below.
+
+Behavior
+The styles array (imported from pimp-my-style.data.js) contains a list of class names.
+
+Each time the page is clicked, the pimp function must:
+
+Add the next style from the styles array to the button in order.
+
+Once all styles have been added, begin removing them in reverse order (LIFO).
+
+While removing classes, toggle the unpimp class on.
+
+When adding classes again, toggle the unpimp class off.
+
+The process should loop infinitely — adding styles, then removing them, and repeating.
+
+Example
+Given the following styles array:
+
+["one", "two", "three"];
+The button’s class changes as follows:
+
+Page load  --> <button class="button"></button>
+
+Click 1 --> <button class="button one"></button>
+Click 2 --> <button class="button one two"></button>
+Click 3 --> <button class="button one two three unpimp"></button>
+Click 4 --> <button class="button one two unpimp"></button>
+Click 5 --> <button class="button one unpimp"></button>
+Click 6 --> <button class="button"></button>
+After this point, the process repeats.
+
+Files
+You only need to create and submit the JavaScript file pimp-my-style.js. You are provided the following files for local testing:
+
+pimp-my-style.html — open in your browser to test your code.
+
+pimp-my-style.data.js — contains the styles array you’ll use.
+
+pimp-my-style.data.css — provides styles corresponding to each class (optional to modify).
+
+Expected Result
+🎬 You can view the expected behavior here: Expected Result Video
+

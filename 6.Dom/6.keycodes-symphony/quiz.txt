@@ -1,0 +1,75 @@
+In this project, you’ll transform your keyboard into a visual instrument that generates colorful notes every time you press a key. You’ll dynamically create, style, and remove elements from the DOM based on key events — composing a live, interactive “symphony of colors and letters.”
+
+Role Play
+You are a digital composer, sitting in front of your keyboard — not a piano, but a computer keyboard. Each letter you press creates a vibrant note, contributing to your own virtual symphony. With every keystroke, your browser becomes your canvas, and your keys turn into musical colors that appear and disappear as you play.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Handle keyboard events using keydown.
+
+Dynamically create and style DOM elements.
+
+Generate unique colors programmatically from key data.
+
+Implement event-driven logic to add, remove, and clear elements.
+
+Manage real-time interactions using JavaScript.
+
+Instructions
+General
+Create a function named compose that listens to keyboard input and manipulates the DOM accordingly.
+
+Behavior
+The function should fire every time a key is pressed (keydown event).
+
+When a lowercase letter (a–z) is pressed:
+
+Create a new <div> element with the class note.
+
+Set its textContent to the pressed letter.
+
+Assign it a unique background color, generated using the event’s key.
+
+Append it to the page.
+
+When the Backspace key is pressed:
+
+Remove the last created note from the page.
+
+When the Escape key is pressed:
+
+Clear all notes from the page.
+
+Example Behavior
+Pressing “a”, “b”, and “c” adds three colorful divs:
+
+<div class="note" style="background-color: ...;">a</div>
+<div class="note" style="background-color: ...;">b</div>
+<div class="note" style="background-color: ...;">c</div>
+Pressing Backspace removes the last one (c).
+
+Pressing Escape clears the entire symphony.
+
+Files
+You only need to create and submit the JavaScript file keycodes-symphony.js. You are provided the following files for testing locally:
+
+keycodes-symphony.html — open this file in your browser to run your code.
+
+keycodes-symphony.data.css — provides styles for the note elements (optional to modify).
+
+Expected Result
+🎬 You can see the expected behavior in this demonstration: Expected Result Video
+
+Resources
+KeyboardEvent
+
+keydown event
+
+KeyboardEvent.key
+
+Document.createElement()
+
+Element.textContent
+
+Node.remove()
