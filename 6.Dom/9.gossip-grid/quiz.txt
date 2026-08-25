@@ -1,0 +1,94 @@
+In this project, you’ll build an interactive gossip-sharing grid, displaying gossip messages as cards and allowing users to post their own. You’ll also create live range sliders to adjust the appearance of all gossip cards in real time — controlling their width, font size, and background lightness.
+
+Role Play
+Imagine you’re running an anonymous gossip board for a small online community. Every message gets displayed on a colorful card in a responsive grid. You’ll set up tools for users to post new gossips and customize how the gossip grid looks, letting them tweak sizes and colors to their liking.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Dynamically generate and style DOM elements using JavaScript.
+
+Handle form submissions to add new data to the page.
+
+Use range inputs to create live, adjustable styling controls.
+
+Work with HSL color values for smooth color variations.
+
+Understand event-driven UI updates and DOM re-rendering.
+
+Instructions
+General
+Create a function named grid that builds a gossip grid layout displaying all gossips from the provided data file. Each gossip will appear as a card (<div> with class gossip), displayed in the order they appear in the dataset.
+
+Gossip Cards
+Each gossip is represented by a div with the class gossip.
+
+The first gossip card must be a form, allowing users to add new gossips:
+
+Contains a <textarea> for writing new gossip.
+
+Contains a submit button with the text "Share gossip!".
+
+When submitted, it adds the new gossip as a new div to the grid.
+
+Range Controls
+Below or above the gossip grid, create a div with the class ranges containing three range sliders with the class range.
+
+Each slider adjusts a specific visual property for all gossip cards:
+
+Input ID	Function	Range	Affected Property
+width	Controls the width of gossip cards	200 → 800 px	element.style.width
+fontSize	Controls the font size of gossip text	20 → 40 px	element.style.fontSize
+background	Controls the background lightness	20 → 75%	background-color: hsl(280, 50%, X%)
+The changes should apply live to all gossip cards.
+
+Use HSL color formatting for the background color.
+
+Example Structure
+<div class="ranges">
+  <input type="range" id="width" class="range" min="200" max="800" />
+  <input type="range" id="fontSize" class="range" min="20" max="40" />
+  <input type="range" id="background" class="range" min="20" max="75" />
+</div>
+
+<div class="gossip-grid">
+  <form class="gossip">
+    <textarea></textarea>
+    <button type="submit">Share gossip!</button>
+  </form>
+  <div class="gossip">Some juicy gossip...</div>
+  <div class="gossip">Another secret revealed!</div>
+</div>
+Example Behavior
+Moving the width slider resizes all gossip cards.
+
+Adjusting the font size slider changes the text size of every card.
+
+Changing the background slider lightens or darkens the cards’ colors.
+
+Submitting the form adds a new gossip card immediately to the grid.
+
+Files
+You only need to create and submit gossip-grid.js. You are provided the following files for testing locally:
+
+gossip-grid.html — open this file in your browser to test your implementation.
+
+gossip-grid.data.js — contains the list of gossips you must import.
+
+gossip-grid.data.css — optional CSS file providing base styles.
+
+Expected Result
+🎬 Watch the expected behavior here: Expected Result Video
+
+Resources
+HTML <form> element
+
+HTML <input> element
+
+Range input type
+
+Node.append()
+
+Element.style
+
+HSL colors in CSS

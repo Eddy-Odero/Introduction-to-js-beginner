@@ -1,0 +1,120 @@
+In this project, you’ll create a full-screen, scroll-driven travel page that visually showcases destinations based on their latitude — from north to south. As the user scrolls, the background and travel information dynamically update, mimicking an interactive journey through each location.
+
+Role Play
+You’re designing a digital travel log to help you decide your next holiday destination. Each scroll takes you further south, showing beautiful imagery, coordinates, and colors unique to every location. A compass indicates your scrolling direction, helping you navigate your virtual expedition.
+
+Learning Objective
+By the end of this project, you will have learned how to:
+
+Dynamically generate scrollable sections with background images.
+
+Use scroll events to update content in real time.
+
+Control element positioning and styles based on scroll position.
+
+Integrate Google Maps links dynamically.
+
+Manipulate latitude-based sorting for geographic data.
+
+Instructions
+General
+Create a function named explore that builds a vertically scrollable page using data from the provided places array.
+
+Each place will be represented by a fullscreen section with a background image and live-updating travel information.
+
+Data Preparation
+Sort the places array from north to south (higher latitude first).
+
+Example: places.sort((a, b) => b.coordinates[0] - a.coordinates[0])
+
+Layout & Display
+For each place:
+
+Create a <section> element.
+
+Set its background image using the format:
+
+background: url("./where-do-we-go_images/name-of-the-place.jpg");
+The section should take up the full viewport height.
+
+Location Indicator
+Create an <a> tag in the middle of the screen that:
+
+Has the class location.
+
+Displays:
+
+<name>
+<latitude, longitude>
+(separated by a line break \n).
+
+Uses the color defined by the place’s color property.
+
+Updates dynamically when scrolling — as soon as the next section reaches the vertical center of the viewport.
+
+Links (href) to a Google Maps search for the current place’s coordinates.
+
+href = `https://www.google.com/maps?q=${latitude},${longitude}`;
+Opens the link in a new tab (target="_blank").
+
+Compass Direction Indicator
+Add a div with the class direction that:
+
+Displays N (North) when the user scrolls up.
+
+Displays S (South) when the user scrolls down.
+
+Updates in real time as the scroll direction changes.
+
+Scroll Behavior
+As you scroll:
+
+When the midpoint of the viewport crosses into a new section, update:
+
+The text and color of the .location element.
+
+The compass direction (N or S).
+
+Use window.scrollY and window.innerHeight to detect when the center of the screen hits the next section.
+
+Example Structure
+<section style="background: url('./where-do-we-go_images/paris.jpg')"></section>
+<section style="background: url('./where-do-we-go_images/rome.jpg')"></section>
+
+<a
+  class="location"
+  href="https://www.google.com/maps?q=48.8566,2.3522"
+  target="_blank"
+>
+  Paris 48.8566, 2.3522
+</a>
+
+<div class="direction">N</div>
+Files
+You only need to create and submit where-do-we-go.js. You are provided the following files for local testing:
+
+where-do-we-go.html — open in your browser to test your implementation.
+
+where-do-we-go.data.js — contains the places data array.
+
+where-do-we-go.data.css — optional styling file for layout and positioning.
+
+where-do-we-go_images/ — folder containing the destination images.
+
+Expected Result
+🎬 Watch the expected behavior here: Expected Result Video
+
+Resources
+Scroll event
+
+Window interface
+
+window.innerHeight
+
+window.scrollY
+
+pageYOffset
+
+DMS and decimal degrees
+
+Google Maps query URLs
