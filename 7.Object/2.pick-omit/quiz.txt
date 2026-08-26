@@ -1,0 +1,40 @@
+In this project, you will create two utility functions that allow you to select or exclude specific properties from an object. These functions are commonly used in data processing and API design to extract or filter data cleanly without mutating the original object.
+
+Role Play
+You’re developing a lightweight data management library and need to provide tools that can filter object properties dynamically. Whether you want to select only specific fields (pick) or remove unwanted ones (omit), these functions will help you manipulate data efficiently while keeping your operations pure and predictable.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Work with JavaScript objects and their properties.
+
+Use pure functions to avoid modifying original data.
+
+Handle arrays and strings as flexible input types.
+
+Implement utility functions for data selection and filtering.
+
+Instructions
+General
+Create two functions named pick and omit, each taking:
+
+An object as the first argument.
+
+A string or an array of strings as the second argument.
+
+Each function should return a new object based on the following rules:
+
+pick
+The pick function should:
+
+Return a new object that includes only the keys present in the provided string or array of strings.
+
+omit
+The omit function should:
+
+Return a new object that includes only the keys not present in the provided string or array of strings.
+
+Both functions must be pure — meaning they must not modify the original object.
+
+Resources
+Object
