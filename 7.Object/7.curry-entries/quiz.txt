@@ -1,0 +1,102 @@
+In this project, you will implement curried functions that operate on an object’s entries. These curried functions will allow you to apply operations like merging, mapping, filtering, and reducing objects in a functional programming style. This project focuses on understanding currying, higher-order functions, and object manipulation.
+
+Role Play
+You’re designing a toolkit for a galactic intelligence database that manages the profiles of star pilots and Force users. To efficiently process and analyze this data, you’ll create curried functions that can transform and combine objects dynamically. Your functions will handle tasks like merging profiles, filtering Force users, and calculating average performance scores.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Implement curried functions that operate on objects.
+
+Apply functional programming patterns to key-value pairs.
+
+Use .map(), .filter(), and .reduce()-like logic on object structures.
+
+Combine currying and object manipulation for modular, reusable functions.
+
+Instructions
+General
+Create the following curried functions that operate on object entries. Each function should follow the described behavior and return a new object or value as appropriate.
+
+defaultCurry
+Curries two objects and merges them. If a key exists in both objects, the value from the second object overrides the first.
+
+defaultCurry({
+  http: 403,
+  connection: 'close',
+  contentType: 'multipart/form-data',
+})({
+  http: 200,
+  connection: 'open',
+  requestMethod: 'GET'
+})
+// Output:
+{
+  http: 200,
+  connection: 'open',
+  contentType: 'multipart/form-data',
+  requestMethod: 'GET'
+}
+mapCurry
+Replicates the behavior of .map(), but for an object. The first argument is the mapping function, and the second is the object.
+
+mapCurry(([k, v]) => [`${k}_force`, v])(personnel)
+// Output:
+{
+  lukeSkywalker_force: { id: 5,  pilotingScore: 98, shootingScore: 56, isForceUser: true  },
+  sabineWren_force:    { id: 82, pilotingScore: 73, shootingScore: 99, isForceUser: false },
+  zebOrellios_force:   { id: 22, pilotingScore: 20, shootingScore: 59, isForceUser: false },
+  ezraBridger_force:   { id: 15, pilotingScore: 43, shootingScore: 67, isForceUser: true  },
+  calebDume_force:     { id: 11, pilotingScore: 71, shootingScore: 85, isForceUser: true  },
+}
+reduceCurry
+Replicates the behavior of .reduce(), but for an object. The first argument is the reducer function, and the second is the object and initial value.
+
+reduceCurry((acc, [k, v]) => (acc += v))({ a: 1, b: 2, c: 3 }, 0);
+// Output:
+6;
+filterCurry
+Replicates the behavior of .filter(), but for an object. The first argument is the filtering function, and the second is the object.
+
+filterCurry(([k, v]) => typeof v === 'string' || k === 'arr')({
+  str: 'string',
+  nbr: 1,
+  arr: [1, 2],
+})
+// Output:
+{ str: 'string', arr: [1, 2] }
+Derived Functions
+Using the curry functions above, create the following functions that take personnel as a parameter:
+
+reduceScore
+Returns the total score value of the people who use the Force. This function may take one additional parameter if needed.
+
+filterForce
+Returns only the Force users with a shootingScore equal to or higher than 80.
+
+mapAverage
+Returns a new object where each person has an additional property averageScore, calculated as the average of their pilotingScore and shootingScore.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+// prettier-ignore
+const personnel = {
+  lukeSkywalker: { id: 5,  pilotingScore: 98, shootingScore: 56, isForceUser: true  },
+  sabineWren:    { id: 82, pilotingScore: 73, shootingScore: 99, isForceUser: false },
+  zebOrellios:   { id: 22, pilotingScore: 20, shootingScore: 59, isForceUser: false },
+  ezraBridger:   { id: 15, pilotingScore: 43, shootingScore: 67, isForceUser: true  },
+  calebDume:     { id: 11, pilotingScore: 71, shootingScore: 85, isForceUser: true  },
+}
+Resources
+Array.prototype.filter
+
+Array.prototype.map
+
+Array.prototype.reduce
+
+Object.entries
+
+Object.fromEntries
+
+What is Currying? (Stack Overflow)
