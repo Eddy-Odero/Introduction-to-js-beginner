@@ -1,0 +1,83 @@
+In this project, you will build a function that organizes unstructured text data into a structured, machine-readable format. By parsing labeled sentences and grouping them based on their type and content, your function will simulate how a simple AI neuron processes and stores information for later use.
+
+Role Play
+You are programming an AI assistant that learns from example inputs. Your AI receives lines of text labeled as Questions or Orders, each followed by a Response. Your task is to teach the AI to organize this information into a structured object, allowing it to recall specific responses or topics later.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Parse and extract structured data from formatted text strings.
+
+Manipulate strings and convert them into standardized identifiers.
+
+Group related information dynamically within nested objects.
+
+Build a flexible data model that can evolve as new data is introduced.
+
+Instructions
+General
+Create a function named neuron that:
+
+Takes an array of strings as input.
+
+Each string contains labeled information in the format: "Label: content - Response: message".
+
+Parses each entry and groups related responses under the correct category and topic.
+
+Returns a nested object that organizes data by type and question/order.
+
+The function should:
+
+Handle multiple responses for the same question or order.
+
+Build the category key by lower-casing the label ("Questions" → questions, "Orders" → orders, "affirmations" → affirmations). The label can be anything, not just Questions/Orders.
+
+Inside each entry, store the original text under a key that is the singular of the label, i.e. the label lower-cased with a trailing s removed (Questions → question, Orders → order, affirmations → affirmation).
+
+Build the topic key from the content by lower-casing it, removing ? and !, then replacing spaces with underscores (_). For example "what is life?" → what_is_life and "turn on the lights!" → turn_on_the_lights. The original text (with its punctuation and original casing) is kept as the stored value.
+
+Example
+neuron([
+  "Questions: what is ounces? - Response: Ounce, unit of weight in the avoirdupois system",
+  "Questions: what is ounces? - Response: equal to 1/16 pound (437 1/2 grains)",
+  "Questions: what is Mud dauber - Response: Mud dauber is a name commonly applied to a number of wasps",
+  "Orders: shutdown! - Response: Yes Sr!",
+  "Orders: Quote something! - Response: Pursue what catches your heart, not what catches your eyes.",
+]);
+Output:
+
+{
+  questions: {
+    what_is_ounces: {
+      question: 'what is ounces?',
+      responses: [
+        'Ounce, unit of weight in the avoirdupois system',
+        'equal to 1/16 pound (437 1/2 grains)'
+      ]
+    },
+    what_is_mud_dauber: {
+      question: 'what is Mud dauber',
+      responses: [
+        'Mud dauber is a name commonly applied to a number of wasps'
+      ]
+    }
+  },
+  orders: {
+    shutdown: {
+      order: 'shutdown!',
+      responses: ['Yes Sr!']
+    },
+    quote_something: {
+      order: 'Quote something!',
+      responses: [
+        'Pursue what catches your heart, not what catches your eyes.'
+      ]
+    }
+  }
+}
+Resources
+String
+
+Array.prototype.reduce
+
+Object

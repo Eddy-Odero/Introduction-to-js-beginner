@@ -1,0 +1,62 @@
+In this project, you will create a function that scans a sentence for personal pronouns and collects contextual information about them. The function will identify how often each pronoun appears and record the first non-pronoun word that immediately follows each occurrence.
+
+Role Play
+You are building a simple text analysis tool that tracks how pronouns are used in a sentence. For each pronoun found, your tool will determine what words most often follow it. This can help analyze writing patterns, dialogue, or even stylistic tendencies in text.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Parse and analyze strings in JavaScript.
+
+Identify and handle specific keywords (personal pronouns).
+
+Manage conditional logic to ignore undesired cases (like consecutive pronouns).
+
+Build and update nested objects dynamically.
+
+Instructions
+General
+Create a function named pronoun that:
+
+Takes a string as its only argument.
+
+Returns an object where each key is a personal pronoun found in the string.
+
+Each key’s value is a sub-object containing:
+
+word: an array of words that immediately follow the pronoun (excluding other pronouns).
+
+count: the total number of times the pronoun appears in the string.
+
+If a pronoun is followed by another pronoun, that following word should not be included in the word array.
+
+Pronouns to Track
+i
+
+you
+
+he
+
+she
+
+it
+
+they
+
+we
+
+Example
+const ex1 =
+  "Using Array Destructuring, you you can iterate through objects easily.";
+pronoun(ex1);
+// → { you: { word: ['can'], count: 2 } }
+
+const ex2 = "If he you want to buy something you have to pay.";
+pronoun(ex2);
+// → { he: { word: [], count: 1 }, you: { word: ['want', 'have'], count: 2 } }
+Resources
+String
+
+Regular Expressions
+
+Object

@@ -1,0 +1,40 @@
+In this project, you will implement a function that performs a deep assignment of properties from one or more source objects into a target object. Unlike a shallow copy, this function will recursively merge nested structures, ensuring that complex objects and arrays are properly duplicated without shared references.
+
+Role Play
+You’re developing a configuration system that merges multiple user and system settings. Simple copying isn’t enough — nested structures like theme settings or network configurations must be deeply merged to preserve all levels of detail. To solve this, you’ll implement a replica() function capable of recursively combining objects.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Perform deep object assignment across multiple sources.
+
+Differentiate between shallow and deep merges.
+
+Use recursion to combine nested objects and arrays.
+
+Build a utility that safely merges complex JavaScript data structures.
+
+Instructions
+General
+Create a function named replica that:
+
+Takes a target object and one or more source objects as arguments.
+
+Deeply assigns all properties from the sources to the target.
+
+Handles nested objects and arrays recursively.
+
+Ensures that modifications to the merged structure do not affect the originals.
+
+Example:
+
+const obj1 = { a: 1, b: { x: 10 } };
+const obj2 = { b: { y: 20 }, c: 3 };
+
+const result = replica(obj1, obj2);
+console.log(result);
+// → { a: 1, b: { x: 10, y: 20 }, c: 3 }
+Be careful not to perform shallow copies — nested properties must be merged recursively.
+
+Resources
+Data Structures (Nan Academy Example)
