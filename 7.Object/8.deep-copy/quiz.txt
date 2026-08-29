@@ -1,0 +1,39 @@
+In this project, you will create a function capable of recursively copying objects and arrays. This ensures that the new structure is completely independent of the original, preventing unwanted side effects caused by shared references.
+
+Role Play
+You’re working on a data duplication system where each record must be safely cloned without altering the original. To achieve this, you’ll implement a deepCopy() function that can handle nested arrays and objects of any depth, ensuring each copy is fully detached from the source.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Distinguish between shallow and deep copies.
+
+Use recursion to navigate and copy nested structures.
+
+Handle both arrays and objects dynamically.
+
+Build safer, more predictable JavaScript code when working with mutable data.
+
+Instructions
+General
+Create a function named deepCopy that:
+
+Takes an object or array as input.
+
+Returns a new, independent copy of that structure.
+
+Recursively copies all nested objects and arrays so that no references are shared between the original and the copy.
+
+Example:
+
+const original = { a: 1, b: { c: [2, 3] } };
+const copy = deepCopy(original);
+
+copy.b.c.push(4);
+
+console.log(original);
+// → { a: 1, b: { c: [2, 3] } }
+console.log(copy);
+// → { a: 1, b: { c: [2, 3, 4] } }
+Resources
+Object
