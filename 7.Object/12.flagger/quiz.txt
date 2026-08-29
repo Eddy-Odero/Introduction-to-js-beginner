@@ -1,0 +1,68 @@
+In this project, you will create a function that processes flag configurations and generates a structured object containing flag aliases and descriptions. This is a common utility used in command-line tools or configuration parsers, where each flag has a short alias and a descriptive explanation.
+
+Role Play
+You are building a command-line helper for a custom tool. Your users need an easy way to view flag options and their meanings. To achieve this, you’ll design a function named flags() that automatically builds a help system — listing available commands, their short aliases, and their descriptions, with flexible handling of a help flag.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Process and organize object-based configurations.
+
+Dynamically generate aliases and descriptions for command flags.
+
+Implement conditional logic based on the presence of specific keys.
+
+Produce formatted, human-readable output suitable for CLI or documentation.
+
+Instructions
+General
+Create a function named flags that:
+
+Takes an object as input, where keys represent flag names and values represent flag descriptions.
+
+Returns a new object with two properties:
+
+alias: an object mapping short aliases (first letters) to their corresponding flag names.
+
+description: a string containing formatted flag descriptions.
+
+Help Flag Rules
+The help flag must always appear in the output, even if it’s not included in the input.
+
+If the input does not include a help key, the output should include descriptions for all flags.
+
+If the input does include a help key, it specifies which flag descriptions to include (e.g., help: ['divide']).
+
+Example
+Input:
+
+{
+  multiply: 'multiply the values',
+  divide: 'divides the values',
+  help: ['divide']
+}
+Output:
+
+{
+  alias: { h: 'help', m: 'multiply', d: 'divide' },
+  description: '-d, --divide: divides the values'
+}
+If the input does not contain the help property:
+
+Input:
+
+{
+  multiply: 'multiply the values',
+  divide: 'divides the values'
+}
+Output:
+
+{
+  alias: { h: 'help', m: 'multiply', d: 'divide' },
+  description: '-m, --multiply: multiply the values\n-d, --divide: divides the values'
+}
+Resources
+Object
+
+String
+
