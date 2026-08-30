@@ -1,0 +1,76 @@
+In this project, you will build an asynchronous function that analyzes FIFA World Cup winner data from a simulated database. Your function will determine whether a given country has ever won, how many times, and under what circumstances — returning a formatted message based on the data retrieved.
+
+Role Play
+You’ve been hired by a sports analytics company to enhance their football database API. Your task is to create the logic behind a query function named isWinner(), which will determine whether a given country qualifies as a “champion” and return the appropriate message based on its performance history.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Work with asynchronous functions using async and await.
+
+Handle Promises and potential errors gracefully.
+
+Process and combine data from multiple asynchronous sources.
+
+Build conditional logic to generate dynamic output messages.
+
+Instructions
+General
+Create a function named isWinner that:
+
+Accepts a single parameter:
+
+country — a string representing the name of a country.
+
+Uses the provided db API to gather and analyze data.
+
+Returns a resolved Promise containing a string that fits one of the specified formats.
+
+Behavior
+Your function must use the following asynchronous methods from the db API:
+
+db.getWinner(countryName) Returns information about a country (name, id, and continent). Throws an error if the country is not found.
+
+db.getResults(countryId) Returns a list of results (each containing year and score) for the given country. Throws an error if the country has never won.
+
+Conditions and Expected Responses
+If the country never won a World Cup:
+
+"Country never was a winner";
+If the country is not from Europe:
+
+"Country is not what we are looking for because of the continent";
+If the country won fewer than 3 times:
+
+"Country is not what we are looking for because of the number of times it was champion";
+If the country is from Europe and has won 3 or more times:
+
+"Country won the FIFA World Cup in <years> winning by <results>";
+Where:
+
+<years> lists the years of each victory separated by commas.
+
+<results> lists the scores of each win separated by commas.
+
+Example
+isWinner("Germany").then(console.log);
+Expected Output:
+
+Germany won the FIFA World Cup in 1954, 1974, 1990, 2014 winning by 3-2, 2-1, 1-0, 1-0isWinner("France").then(console.log);
+Expected Output:
+
+France is not what we are looking for because of the number of times it was championisWinner("Brazil").then(console.log);
+Expected Output:
+
+Brazil is not what we are looking for because of the continentisWinner("Japan").then(console.log);
+Expected Output:
+
+Japan never was a winner
+Resources
+Promises
+
+Async and Await
+
+Array.prototype.map
+
+Array.prototype.join
