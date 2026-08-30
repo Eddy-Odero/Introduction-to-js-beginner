@@ -1,0 +1,90 @@
+In this project, you will build two higher-order functions — retry and timeout — that enhance asynchronous functions with reliability and control. These utilities will help manage errors and execution timeouts when dealing with unpredictable or long-running asynchronous operations.
+
+Role Play
+You’re designing a resilient task runner for unreliable operations such as API calls or network requests. Sometimes these operations fail, and sometimes they take too long. To make your system smarter, you’ll implement:
+
+A retry mechanism that automatically reattempts failed operations.
+
+A timeout controller that stops tasks if they take too long to complete.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Manage asynchronous execution with async/await.
+
+Handle errors and retries in asynchronous workflows.
+
+Use Promise.race to manage execution timeouts.
+
+Control concurrency with JavaScript Promises and timers.
+
+Instructions
+General
+Create two functions: retry and timeout.
+
+retry
+The retry function should:
+
+Take two parameters:
+
+count: the maximum number of retries allowed.
+
+callback: an asynchronous function to execute.
+
+Return a new function that:
+
+Invokes the callback with any provided arguments.
+
+If the callback throws an error, retries up to the specified number of times.
+
+After all retries have failed, rejects with the error thrown by the last attempt (propagate that error, do not replace it with a new one, its message is checked).
+
+If count is 3, the callback may be invoked up to 4 times (the initial attempt plus 3 retries).
+
+Example:
+
+const unstableTask = async (x) => {
+  if (Math.random() < 0.7) throw new Error("Failed!");
+  return `Success with ${x}`;
+};
+
+const reliableTask = retry(3, unstableTask);
+
+reliableTask("data").then(console.log).catch(console.error);
+timeout
+The timeout function should:
+
+Take two parameters:
+
+delay: the maximum wait time in milliseconds.
+
+callback: an asynchronous function to execute.
+
+Return a new function that:
+
+Invokes the callback with any provided arguments.
+
+Waits for the result of callback.
+
+If the callback does not resolve within delay, it must reject with Error('timeout').
+
+Hint: Use Promise.race to run the callback alongside a timer.
+
+Example:
+
+const slowTask = async () => {
+  await new Promise((r) => setTimeout(r, 3000));
+  return "Done";
+};
+
+const limitedTask = timeout(2000, slowTask);
+
+limitedTask().then(console.log).catch(console.error); // → Error: timeout
+Resources
+Promises
+
+setTimeout
+
+Promise.race
+
+MDN: Async and Await
