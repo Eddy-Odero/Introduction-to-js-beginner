@@ -1,0 +1,81 @@
+In this project, you will build an asynchronous function that retrieves and processes JSON data from a remote API. The function will construct a full URL with query parameters, handle HTTP errors, and parse the JSON response to return useful data or throw meaningful errors.
+
+Role Play
+You’re creating a lightweight HTTP client utility to streamline your application’s API calls. It should handle the repetitive tasks of constructing URLs, checking responses, parsing JSON, and surfacing errors consistently — all wrapped in a clean and reusable function named getJSON().
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Use the Fetch API to perform asynchronous HTTP requests.
+
+Construct valid URLs with query parameters using URLSearchParams.
+
+Handle HTTP errors and server-side error messages gracefully.
+
+Parse and manage JSON data returned from API responses.
+
+Work effectively with Promises and async/await.
+
+Instructions
+General
+Create a function named getJSON that takes two parameters:
+
+path: a URL string representing the endpoint to fetch.
+
+params: an optional object containing query parameters to append to the URL.
+
+Behavior
+Construct the full URL
+
+If params is provided, convert it to a query string using URLSearchParams.
+
+Append the query string to the base path.
+
+Fetch the data
+
+Use fetch() to send the request.
+
+If the response is not OK (!response.ok), throw an Error with the response status text.
+
+Parse the response body
+
+Read and parse the response as JSON.
+
+If the parsed object contains a key "data", return its value.
+
+If it contains an "error" key, throw an Error with that message.
+
+Example
+// Example API call
+getJSON("https://api.example.com/users", { limit: 3 })
+  .then(console.log)
+  .catch(console.error);
+If the request succeeds:
+
+// Response JSON:
+{
+  data: [{ name: "Alice" }, { name: "Bob" }];
+}
+
+// Output:
+[{ name: "Alice" }, { name: "Bob" }];
+If the response includes an error:
+
+// Response JSON:
+{ error: 'Invalid token' }
+
+// Output:
+Error: Invalid token
+If the HTTP request fails:
+
+// Response status: 404 Not Found
+
+Error: Not Found
+Resources
+Promises in JavaScript
+
+Using fetch
+
+URLSearchParams
+
+JSON
