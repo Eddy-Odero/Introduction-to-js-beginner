@@ -1,0 +1,63 @@
+In this project, you will recreate the functionality of the _.throttle utility from Lodash. Throttling is a performance optimization technique used to limit how often a function can execute over time, even if it’s called continuously — for example, during window resizing or scrolling events.
+
+Role Play
+You’re building an application that processes user actions like scrolling or mouse movement. These events can fire hundreds of times per second, causing unnecessary strain on performance. To optimize this, you’ll implement throttle functions that control how frequently certain functions execute, ensuring your application stays smooth and efficient.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Implement function throttling using timers.
+
+Understand the difference between debounce and throttle.
+
+Control execution timing using the leading and trailing options.
+
+Use closures and state management for timing-based behavior.
+
+Instructions
+General
+Create two functions that replicate the behavior of Lodash’s _.throttle.
+
+throttle
+Returns a function that, when called repeatedly, ensures the original function executes at most once every specified delay.
+
+Ignores any additional calls made during the waiting period.
+
+Example:
+
+const log = throttle(() => console.log("Action!"), 2000);
+
+log();
+log();
+log();
+// "Action!" is logged only once every 2 seconds
+opThrottle
+Works like throttle, but includes options for leading and trailing execution.
+
+The leading option determines whether the function should run immediately on the first call.
+
+The trailing option determines whether the function should run once more after the wait time if additional calls were made during the delay.
+
+Both options default to false here. In particular, calling opThrottle(fn, delay) with no options object means neither edge fires (unlike Lodash, whose defaults are true), so a plain opThrottle never invokes fn.
+
+Example:
+
+const log = opThrottle(() => console.log("Run!"), 2000, {
+  leading: true,
+  trailing: true,
+});
+
+log(); // Executes immediately (leading)
+log();
+log();
+// Executes once more at the end of the 2-second window (trailing)
+Resources
+Lodash throttle documentation
+
+CSS Tricks: Debouncing and Throttling Explained
+
+Stack Overflow: Understanding Lodash debounce and throttle
+
+setTimeout
+
+clearTimeout
