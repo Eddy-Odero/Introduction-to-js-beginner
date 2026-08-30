@@ -1,0 +1,54 @@
+In this project, you will recreate the functionality of the popular _.debounce utility from Lodash. Debouncing is a technique used to control how often a function executes, particularly useful in performance optimization scenarios such as search input handlers, window resizing, and scroll events.
+
+Role Play
+You are developing a web application that reacts to user input, but rapid, repeated actions are causing performance issues. To solve this, you decide to implement your own debounce functions that delay execution until the user has stopped triggering events — ensuring smooth and efficient behavior.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Implement function debouncing in JavaScript.
+
+Control when and how often a function executes.
+
+Use closures and timers (setTimeout / clearTimeout) effectively.
+
+Understand the difference between trailing and leading debounce options.
+
+Instructions
+General
+Create two functions that replicate the behavior of Lodash’s _.debounce:
+
+debounce
+Returns a new function that delays execution of the original function until after a specified wait time has passed since the last call.
+
+Only executes the function after the user stops triggering it.
+
+Example:
+
+const log = debounce(() => console.log("Hello!"), 1000);
+
+log();
+log();
+log();
+// "Hello!" is logged only once, 1 second after the last call
+opDebounce
+Works like debounce, but supports the leading option.
+
+When leading: true, the function executes immediately on the first call, then ignores subsequent calls until the wait time passes.
+
+Example:
+
+const log = opDebounce(() => console.log("Hi!"), 1000, { leading: true });
+
+log(); // executes immediately
+log();
+log();
+// No additional logs until 1 second after the last call
+Resources
+Lodash debounce documentation
+
+CSS Tricks: Debouncing and Throttling Explained
+
+setTimeout
+
+clearTimeout
