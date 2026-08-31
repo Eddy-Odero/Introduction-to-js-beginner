@@ -1,0 +1,94 @@
+In this project, you will simulate a simplified version of a search engine that queries multiple servers concurrently and returns the fastest results. The exercise focuses on mastering asynchronous JavaScript patterns using Promise.race, Promise.all, and timeouts for robust control over concurrent operations.
+
+Role Play
+You’re building a prototype for “Gougle Search”, a minimal search engine that fetches results from multiple distributed servers — “web”, “image”, and “video”. Each server has a backup mirror, and you need to ensure that for every category, you return the fastest available result. Your system must also respect a global timeout to prevent long-running searches from hanging indefinitely.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Manage parallel asynchronous operations with Promise.all.
+
+Use Promise.race to get the fastest response between multiple async calls.
+
+Implement a timeout mechanism for all concurrent requests.
+
+Combine asynchronous control flow patterns effectively.
+
+Instructions
+General
+You must create two functions: queryServers and gougleSearch.
+
+queryServers
+This function should:
+
+Take two parameters:
+
+serverName: a string indicating the server’s name.
+
+q: the search query string.
+
+Construct two URLs:
+
+/serverName?q=query
+
+/serverName_backup?q=query
+
+Return a Promise that resolves with the fastest of the two requests using Promise.race.
+
+Example:
+
+queryServers("pouet", "hello+world");
+// Returns the fastest result of:
+getJSON("/pouet?q=hello+world");
+getJSON("/pouet_backup?q=hello+world");
+gougleSearch
+This function should:
+
+Take a single parameter:
+
+q: the query string.
+
+Call queryServers concurrently for the following three servers:
+
+"web"
+
+"image"
+
+"video"
+
+Return an object containing the resolved values of all three queries, where the keys are the server names.
+
+Example expected structure:
+
+{
+  web: '/web?q=hello+world',
+  image: '/image?q=hello+world',
+  video: '/video?q=hello+world'
+}
+Timeout Requirement
+The entire operation must complete within 80 milliseconds.
+
+If all queries do not resolve within that time, the function should throw an Error('timeout').
+
+Hint: Use Promise.race with a setTimeout promise to implement the timeout behavior.
+
+Example
+gougleSearch("hello+world").then(console.log).catch(console.error);
+Possible Output:
+
+{
+  web: '/web?q=hello+world',
+  image: '/image_backup?q=hello+world',
+  video: '/video?q=hello+world'
+}
+If the operation exceeds 80ms:
+
+Error: timeout;
+Resources
+Promise.race
+
+Promise.all
+
+Async Functions
+
+setTimeout
