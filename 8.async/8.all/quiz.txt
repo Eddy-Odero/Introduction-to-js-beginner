@@ -1,0 +1,67 @@
+In this project, you will implement a version of Promise.all that works with objects instead of arrays. The goal is to take an object whose values may be Promises and return a new Promise that resolves when all values have resolved, preserving the object’s structure.
+
+Role Play
+You’re developing a system that aggregates data from multiple asynchronous sources — such as APIs, databases, and cached values. Instead of managing arrays of Promises, you decide to design a function that works directly with objects, allowing for clearer, key-based access to each result once all operations are complete.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Use Promise mechanics to coordinate multiple asynchronous operations.
+
+Work with object entries (Object.entries, Object.fromEntries).
+
+Implement functionality similar to Promise.all, but adapted for object-based data.
+
+Handle errors and rejections correctly in asynchronous control flow.
+
+Instructions
+General
+Create a function named all that:
+
+Takes an object whose values may be Promises or synchronous values.
+
+Returns a Promise that:
+
+Resolves when all properties’ values have resolved.
+
+Rejects if any of the Promises reject.
+
+Resolves to a new object with the same keys, but with resolved values.
+
+Example
+const obj = {
+  first: Promise.resolve(1),
+  second: Promise.resolve(2),
+  third: 3,
+};
+
+all(obj).then(console.log);
+// Output: { first: 1, second: 2, third: 3 }
+If any of the Promises reject:
+
+const obj = {
+  a: Promise.resolve("ok"),
+  b: Promise.reject("fail"),
+};
+
+all(obj).catch(console.error);
+// Output: 'fail'
+Hints
+Note: the built-in Promise.all is disabled for this exercise (Promise.all = undefined). You must coordinate the promises yourself; you are rebuilding it.
+
+Convert the object to entries using Object.entries(obj).
+
+Return a new Promise. Walk over the entries and, for each value, do Promise.resolve(value).then(...) to collect the resolved value under its key.
+
+Track how many values are still pending; resolve your promise (with the rebuilt object) once every value has resolved. If any value rejects, reject with that error.
+
+An empty object resolves immediately to {}.
+
+Resources
+Promises in JavaScript
+
+Promise.all
+
+Object.entries
+
+Object.fromEntries
