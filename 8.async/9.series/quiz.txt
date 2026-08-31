@@ -1,0 +1,54 @@
+In this project, you will create a function that executes a sequence of asynchronous functions one after another, ensuring that each function runs only after the previous one has completed. This pattern is essential when tasks must occur in a strict order rather than in parallel.
+
+Role Play
+You are managing a data pipeline where each step depends on the result of the previous one — such as fetching user data, validating it, and then saving it to a database. To guarantee order, you’ll design a function named series() that executes asynchronous functions sequentially and returns their results in the correct order.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Execute asynchronous functions in series instead of concurrently.
+
+Work effectively with Promises and async/await.
+
+Accumulate results from asynchronous operations while maintaining their order.
+
+Understand the difference between concurrent and sequential Promise execution.
+
+Instructions
+General
+Create a function named series that:
+
+Takes an array of asynchronous functions (each returning a Promise).
+
+Executes them one after another, waiting for each to finish before starting the next.
+
+Returns a Promise that resolves with an array of results, maintaining the same order as the input array.
+
+Example
+const wait = (value, delay) =>
+  new Promise((resolve) => setTimeout(() => resolve(value), delay));
+
+const tasks = [
+  () => wait("first", 100),
+  () => wait("second", 50),
+  () => wait("third", 10),
+];
+
+series(tasks).then(console.log);
+// Output: ['first', 'second', 'third']
+Each function runs sequentially, even though later ones have shorter delays.
+
+If any function rejects, series should immediately reject with that error:
+
+const fail = () => Promise.reject("Error");
+
+series([() => Promise.resolve(1), fail, () => Promise.resolve(2)])
+  .then(console.log)
+  .catch(console.error);
+// Output: 'Error'
+Resources
+Promises in JavaScript
+
+Async/Await
+
+Promise chaining
