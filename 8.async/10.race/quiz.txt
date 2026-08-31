@@ -1,0 +1,80 @@
+In this project, you will implement your own versions of Promise.race and a custom function named some. These functions handle collections of Promises but with different goals — race resolves or rejects as soon as any Promise settles, while some waits for a specific number of successful resolutions.
+
+Role Play
+You’re building a lightweight asynchronous task manager. You need tools to control how multiple asynchronous operations compete or cooperate — one that returns the first result to finish (race), and another that collects a specific number of results before proceeding (some).
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Implement core Promise coordination patterns manually.
+
+Understand the behavior and mechanics of Promise.race.
+
+Manage multiple asynchronous operations and selectively resolve results.
+
+Handle fulfilled and rejected Promises carefully when combining them.
+
+Instructions
+General
+Create two functions: race and some.
+
+race
+Works exactly like Promise.race.
+
+Takes an array of Promises or values.
+
+Returns a Promise that settles (resolves or rejects) as soon as the first Promise settles.
+
+Example:
+
+const p1 = new Promise((resolve) => setTimeout(() => resolve("A"), 100));
+const p2 = new Promise((resolve) => setTimeout(() => resolve("B"), 50));
+
+race([p1, p2]).then(console.log);
+// Output: 'B'
+If the first Promise rejects:
+
+const p1 = new Promise((_, reject) => setTimeout(() => reject("Error"), 50));
+const p2 = new Promise((resolve) => setTimeout(() => resolve("Success"), 100));
+
+race([p1, p2]).catch(console.error);
+// Output: 'Error'
+some
+Takes two arguments:
+
+An array of Promises or values.
+
+A count (number) indicating how many fulfilled results to collect.
+
+Returns a Promise that:
+
+Resolves with the first count values that resolve, kept in their original array order (not the order in which they resolved).
+
+If the array is empty or count is less than 1, resolves immediately with an empty array [].
+
+Ignores rejected Promises.
+
+Example:
+
+const a = new Promise((resolve) => setTimeout(() => resolve("A"), 100));
+const b = new Promise((resolve) => setTimeout(() => resolve("B"), 50));
+const c = new Promise((_, reject) => setTimeout(() => reject("Error"), 30));
+
+some([a, b, c], 2).then(console.log);
+// Output: ['A', 'B']   // a and b both resolve (c rejects); results keep the input order
+If fewer than count Promises resolve successfully, it never resolves unless you choose to handle rejections explicitly.
+
+Edge Cases
+some([], 2).then(console.log);
+// Output: []
+
+some([Promise.resolve("X")], 0).then(console.log);
+// Output: []
+Resources
+Promises in JavaScript
+
+Promise.race
+
+Promise.allSettled
+
+Handling multiple Promises
