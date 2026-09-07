@@ -1,0 +1,17 @@
+{
+  "name": "crossword-solver",
+  "version": "1.0.0",
+  "description": "A crossword puzzle solver built in phases (backtracking algorithm)",
+  "main": "crosswordSolver.js",
+  "scripts": {
+    "test:parseGrid": "node test/parseGrid.test.js",
+    "test:findSlots": "node test/findSlots.test.js",
+    "test:validateWords": "node test/validateWords.test.js",
+    "test:solve": "node test/solve.test.js",
+    "test:uniqueness": "node test/uniqueness.test.js",
+    "test:formatOutput": "node test/formatOutput.test.js",
+    "test:crosswordSolver": "node test/crosswordSolver.test.js",
+    "test": "node test/parseGrid.test.js && node test/findSlots.test.js && node test/validateWords.test.js && node test/solve.test.js && node test/uniqueness.test.js && node test/formatOutput.test.js && node test/crosswordSolver.test.js",
+    "start": "node crosswordSolver.js"
+  }
+}
