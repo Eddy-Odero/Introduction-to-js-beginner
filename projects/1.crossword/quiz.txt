@@ -1,0 +1,79 @@
+This project challenges you to implement a crossword puzzle solver, combining logical reasoning with algorithmic problem-solving. You’ll design a function that fills an empty crossword grid with a given list of words, ensuring that every word placement follows the provided structure and results in a unique valid solution.
+
+Role Play
+You’ve joined a game development team working on a crossword puzzle generator. Your specific task is to build the solver engine — the component that fills empty crossword templates automatically using a given set of words. The solver must be smart enough to detect invalid configurations and handle ambiguous or unsolvable puzzles.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to parse and represent grid-based puzzles programmatically.
+
+How to use backtracking algorithms to explore valid word placements.
+
+How to handle constraint validation and detect ambiguous or invalid solutions.
+
+How to structure output as a well-formatted string representation.
+
+Instructions
+General
+Create a function named crosswordSolver that:
+
+Must be defined in a file named crosswordSolver.js.
+
+Accepts two arguments:
+
+A string representing the empty puzzle grid.
+
+An array of words to fill into the puzzle.
+
+Prints to the console a string representing the fully solved crossword.
+
+If the puzzle or the provided list of words:
+
+Does not lead to a unique solution,
+
+Contains invalid formatting,
+
+Or violates the placement rules, The function must print 'Error'.
+
+Puzzle Input Rules
+Each character in the puzzle string represents either:
+
+A number → the number of words starting from that position.
+
+A dot (.) → an empty space that does not need to be filled.
+
+A newline (\n) → the end of a puzzle row.
+
+Tip: You may need to map the crossword grid into a 2D array for easier manipulation. Note: Use recursion or backtracking to explore word placement possibilities and verify uniqueness.
+
+Example
+const emptyPuzzle = `2001
+0..0
+1000
+0..0`;
+const words = ["casa", "alan", "ciao", "anta"];
+
+crosswordSolver(emptyPuzzle, words);
+
+/* Output:
+casa
+i..l
+anta
+o..n
+*/
+Error Cases
+Your function must print 'Error' if:
+
+The input puzzle or word list is invalid.
+
+The puzzle has no possible or multiple valid solutions.
+
+Words overlap incorrectly or leave empty cells.
+
+Resources
+Backtracking Algorithms
+
+Recursion
+
+Working with Strings in JavaScript
