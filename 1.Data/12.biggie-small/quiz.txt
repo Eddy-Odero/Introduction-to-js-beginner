@@ -1,0 +1,69 @@
+By the end of this lesson, you will:
+
+Understand the concept of numeric limits in JavaScript
+
+Learn about JavaScript's Number data type constraints
+
+Work with the smallest and largest possible number values
+
+Access built-in constants for numeric limits
+
+Understanding JavaScript Number Limits
+JavaScript's Number type has built-in limits to the range of values it can represent. These limits are defined by how numbers are stored in memory according to the IEEE-754 standard for floating-point arithmetic (specifically the "double-precision 64-bit binary format").
+
+While JavaScript can work with many different numeric values, there are definite upper and lower bounds to what can be precisely represented.
+
+Your Assignment
+Create a JavaScript file named biggie-smalls.js that defines two variables:
+
+smalls:
+
+Should be a value smaller than every finite number, i.e. negative infinity (-Infinity).
+
+biggie:
+
+Should be a value larger than every finite number, i.e. positive infinity (Infinity).
+
+The tests check biggie > Number.MAX_VALUE and smalls < -Number.MAX_VALUE. Number.MAX_VALUE is the largest finite double, so nothing finite is strictly greater than it, the only values that satisfy these comparisons are Infinity and -Infinity (both of type number).
+
+Testing Your Solution
+To verify your solution works correctly, add these test cases:
+
+// biggie is larger than any finite number
+console.log(biggie > Number.MAX_VALUE); // true
+console.log(typeof biggie); // 'number'
+
+// smalls is smaller than any finite number
+console.log(smalls < -Number.MAX_VALUE); // true
+console.log(typeof smalls); // 'number'
+
+console.log(biggie + 1 === biggie); // true (nothing is bigger than +Infinity)
+Understanding the JavaScript Number System
+It's important to note that:
+
+Infinity and -Infinity are themselves of type number (typeof Infinity === 'number') and compare greater/less than every finite value
+
+Number.MAX_VALUE is the largest finite number, but it is not the largest value; Infinity is larger still
+
+Numbers outside the representable range are converted to Infinity or -Infinity
+
+JavaScript also has the special value NaN (Not a Number)
+
+Submission
+Add your biggie-smalls.js file to your piscine-js repository.
+
+Additional Resources
+Number - JavaScript | MDN
+
+Number.MAX_VALUE - JavaScript | MDN
+
+Number.MIN_VALUE - JavaScript | MDN
+
+IEEE 754 - Wikipedia
+
+Tips for Success
+Remember that Number.MAX_VALUE is only the largest finite value; the value larger than everything finite is Infinity
+
+Consider both the positive and negative extremes
+
+Infinity and -Infinity are still numbers (typeof is 'number')
