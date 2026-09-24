@@ -1,0 +1,30 @@
+In this project, you’ll create a simple utility function that mimics the built-in String.repeat() method in JavaScript. This exercise helps you understand how to manipulate strings and use fundamental programming constructs such as loops and recursion to reproduce existing language features.
+
+Role Play
+Imagine you’re developing a lightweight version of JavaScript from scratch, and your team has assigned you the task of implementing some core string methods. One of your responsibilities is to create a custom version of String.repeat() — a function that repeats a given string a specified number of times. You must implement this functionality manually, without relying on the built-in method.
+
+Learning Objective
+By the end of this exercise, you will have learned how to:
+
+Implement basic string manipulation logic.
+
+Use loops or recursion to perform repetitive operations.
+
+Understand how a native JavaScript method might work internally.
+
+Instructions
+General
+Create a function named repeat that:
+
+Takes two parameters: a string and a number.
+
+Returns a new string containing the input string repeated the given number of times.
+
+Must behave like the native String.repeat() method — but you must implement it yourself.
+
+Tip: Try implementing it using both loops and recursion to explore different approaches.
+
+Code Provided
+The following code will be automatically added to your solution and does not need to be submitted.
+
+String.prototype.repeat = undefined;
