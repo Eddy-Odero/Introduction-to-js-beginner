@@ -1,0 +1,25 @@
+This project focuses on re-creating basic arithmetic operations manually to deepen your understanding of how multiplication, division, and modulo work under the hood. You’ll implement your own versions of these operators without using the built-in arithmetic symbols.
+
+Role Play
+You’ve joined a low-level programming team working on a new JavaScript runtime. The goal: to rebuild basic mathematical operations from scratch before the engine supports standard operators. Your mission is to design and implement three fundamental arithmetic functions — multiply, divide, and modulo — using only logical and iterative constructs.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to simulate mathematical operations using loops or recursion.
+
+How multiplication, division, and modulo work internally.
+
+How to design basic algorithms that mimic native JavaScript operators.
+
+Instructions
+General
+You must create three functions, each taking (a, b) as parameters:
+
+multiply: behaves like the * operator, without using *.
+
+divide: behaves like integer division /, without using /.
+
+modulo: behaves like the % operator, without using %.
+
+Tip: Think of multiplication as repeated addition, and division as repeated subtraction. Note: Be mindful of how you handle negative values and edge cases.
