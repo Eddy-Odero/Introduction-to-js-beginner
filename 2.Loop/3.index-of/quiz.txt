@@ -1,0 +1,40 @@
+This project focuses on re-implementing common array search methods from scratch. You’ll create your own versions of indexOf, lastIndexOf, and includes to understand how JavaScript internally searches for values within arrays.
+
+Role Play
+You’re working on a stripped-down JavaScript engine where many built-in array methods haven’t been implemented yet. Your task is to write the internal logic for searching within arrays — just like how Array.indexOf(), Array.lastIndexOf(), and Array.includes() work — but entirely by hand.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to traverse arrays using loops.
+
+How to search for elements and return the correct index or boolean value.
+
+The difference between finding the first occurrence and the last occurrence of a value in an array.
+
+How to handle optional parameters and implement fallback logic.
+
+Instructions
+General
+You must create three functions that accept an array and a value to search for:
+
+indexOf: returns the index of the first occurrence of the value.
+
+Accepts an optional starting index that defines where the search begins.
+
+Returns -1 if the value is not found.
+
+lastIndexOf: works just like indexOf, but returns the index of the last occurrence of the value.
+
+includes: returns true if the value exists in the array, and false otherwise.
+
+Note: You must not use any of the native methods Array.indexOf(), Array.lastIndexOf(), or Array.includes().
+
+Tip: Think about how to loop through an array forward or backward depending on the function’s purpose.
+
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+Array.prototype.indexOf = undefined;
+Array.prototype.lastIndexOf = undefined;
+Array.prototype.includes = undefined;
