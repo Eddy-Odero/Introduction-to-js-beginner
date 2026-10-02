@@ -1,0 +1,39 @@
+This project challenges you to generate a formatted string of numbers while applying custom substitution rules — a classic exercise for learning about loops, conditions, and control flow. You’ll write a function that transforms numbers based on divisibility rules, returning a readable and structured output.
+
+Role Play
+You’ve just joined a small team working on an educational space-themed project for NASA. To make number sequences more fun for young learners, your task is to build a number generator that follows specific replacement rules inspired by the agency’s name. Each number will either appear as-is or be replaced with coded text — "NA", "SA", or "NASA" — depending on its divisibility.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to iterate through a range of numbers using loops or recursion.
+
+How to apply conditional logic to transform values dynamically.
+
+How to build a formatted string output from iterative operations.
+
+How modular arithmetic (%) can be used to detect divisibility patterns.
+
+Instructions
+General
+Create a function named nasa that takes a number N as an argument and returns a string containing all numbers from 1 to N, separated by spaces.
+
+The function should follow these rules:
+
+Replace numbers divisible by 3 with "NA".
+
+Replace numbers divisible by 5 with "SA".
+
+Replace numbers divisible by both 3 and 5 with "NASA".
+
+Tip: The order of your conditions matters — check divisibility by both 3 and 5 first. Note: The returned value should be a single string with spaces separating the results.
+
+Example
+console.log(nasa(15));
+Output:
+
+1 2 NA 4 SA NA 7 8 NA SA 11 NA 13 14 NASA
+Resources
+Loops
+
+Recursion
