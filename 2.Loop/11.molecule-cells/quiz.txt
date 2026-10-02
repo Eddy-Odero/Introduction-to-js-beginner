@@ -1,0 +1,40 @@
+This project explores how biological data can be represented and transformed using programming concepts. You’ll build two functions that convert DNA to RNA and vice versa by following the complement pairing rules of nucleotides — a perfect exercise for working with strings, loops, and condition-based mapping.
+
+Role Play
+You’ve just joined a bioinformatics research team working on a DNA–RNA transcription simulator. Your task is to develop simple functions that convert strands between DNA and RNA representations, following the base pairing rules that occur in nature. These functions will serve as the foundation for more advanced genome processing tools.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to iterate through strings and manipulate individual characters.
+
+How to apply mapping logic to transform one type of data into another.
+
+How to implement real-world rules (like biological pairings) in code.
+
+How to return formatted strings based on transformation rules.
+
+Instructions
+General
+Create two functions, each taking a string as input and returning a new string:
+
+RNA: converts a DNA strand into its complementary RNA strand.
+
+DNA: converts an RNA strand into its complementary DNA strand.
+
+Complement pairs are as follows:
+
+DNA | RNA
+ G  -  C
+ C  -  G
+ T  -  A
+ A  -  U
+Tip: Use a loop, map, or object to match each base to its complement. Note: All strands must be in uppercase with no spaces (e.g. "ATCG" is valid).
+
+Example
+console.log(RNA("GCTA")); // Output: "CGAU"
+console.log(DNA("CGAU")); // Output: "GCTA"
+Resources
+String methods (MDN)
+
+Loops
