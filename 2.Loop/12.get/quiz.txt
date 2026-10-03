@@ -1,0 +1,46 @@
+This project focuses on building a utility function that retrieves values from nested objects using a string path. You’ll implement logic that interprets dot notation (like "a.b.c") to access deeply nested properties safely and efficiently — a common task in data handling and configuration systems.
+
+Role Play
+You’ve joined a data tools team tasked with building a lightweight configuration parser. Your goal is to implement a get function that can look inside nested objects using a simple string path, returning the correct value even when the data structure is complex.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to navigate nested objects dynamically using string paths.
+
+How to split and traverse data structures safely.
+
+How to handle missing keys gracefully without causing runtime errors.
+
+How to design flexible and reusable helper functions.
+
+Instructions
+General
+Create a function named get that takes two arguments:
+
+src: an object containing nested properties.
+
+path: a string representing a path to a property inside src.
+
+Your function should:
+
+Return the value located at the specified path within the object.
+
+Handle nested paths using dot notation (e.g. "a.b.c").
+
+Return undefined if the path does not exist.
+
+Tip: Use String.split('.') to break the path into segments and loop through each one. Note: Make sure your function doesn’t throw errors when intermediate keys are missing.
+
+Example
+const src = { nested: { key: "peekaboo" } };
+const path = "nested.key";
+
+console.log(get(src, path));
+// Output: 'peekaboo'
+Resources
+Objects
+
+String.split
+
+Optional chaining concept
