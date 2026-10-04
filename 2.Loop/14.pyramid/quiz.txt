@@ -1,0 +1,47 @@
+This project builds upon your previous triangle exercise, challenging you to construct a centered pyramid pattern using string manipulation. You’ll generate symmetrical output by carefully combining spaces and repeated characters, refining your control over string alignment and pattern formation.
+
+Role Play
+You’ve joined a small team developing a retro-style console art generator. Your next task is to expand on the triangle function by creating a pyramid generator. This new function must align each row symmetrically, building a centered pyramid shape that can scale to any specified height.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to build center-aligned patterns using spaces and repeated characters.
+
+How to combine mathematical relationships (like width calculation) with string logic.
+
+How to extend previous logic (from the triangle function) to more complex shapes.
+
+How to format output with precision — especially avoiding extra spaces or newlines.
+
+Instructions
+General
+Create a function named pyramid that behaves like your triangle function, but generates a centered pyramid shape.
+
+The function should:
+
+Take two arguments:
+
+A string representing the character(s) used to build the pyramid.
+
+A number representing the height of the pyramid.
+
+Return a string representing a centered pyramid pattern.
+
+The bottom row should be the widest, and there should be no trailing newline at the end.
+
+Tip: The number of characters in each row follows the formula 2 * row - 1. Note: Use leading spaces to center each row properly.
+
+Example
+console.log(pyramid("*", 5));
+Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+Resources
+Loops
+
+Recursion
