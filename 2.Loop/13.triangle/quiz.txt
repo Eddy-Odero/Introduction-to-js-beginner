@@ -1,0 +1,47 @@
+This project challenges you to create a function that generates a visual pattern — a triangle made of repeated characters. You’ll use string concatenation and looping or recursion to build the pattern dynamically, reinforcing your understanding of iteration, repetition, and string construction.
+
+Role Play
+You’ve been hired as a developer for a console-based drawing tool that helps beginners learn programming through visual patterns. Your task is to implement the triangle function, which builds a right-aligned triangle made of any given character, with its height determined by user input.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to use loops or recursion to construct repetitive patterns.
+
+How to concatenate strings efficiently.
+
+How to format multi-line strings for display in the console.
+
+How to use a combination of character repetition and line breaks to form visual structures.
+
+Instructions
+General
+Create a function named triangle that:
+
+Takes two arguments:
+
+A string representing the character(s) used to build the triangle.
+
+A number representing the height (number of lines) of the triangle.
+
+Returns a string representing the triangle pattern.
+
+Each line should contain an increasing number of characters, starting from one and continuing until it reaches the given height.
+
+The final line must not end with a new line (\n).
+
+Tip: Combine string repetition (char.repeat(n)) or loops to construct each row. Note: Be sure to handle edge cases like a height of 0 or an empty string input.
+
+Example
+console.log(triangle("*", 5));
+Output:
+
+*
+**
+***
+****
+*****
+Resources
+Loops
+
+Recursion
