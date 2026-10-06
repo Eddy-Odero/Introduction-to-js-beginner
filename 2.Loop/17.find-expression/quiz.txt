@@ -1,0 +1,52 @@
+This project challenges you to use algorithmic thinking to build a pathfinding function that constructs a mathematical expression. Starting from 1, your goal is to find a sequence of operations — multiplying by 2 or adding 4 — that results in a given target number. You’ll return the expression as a string if it exists, or undefined if it doesn’t.
+
+Role Play
+You’re working on a small math-based puzzle generator for an educational app. Your mission is to implement a function that automatically finds how to reach a target number using only two operations — multiply by 2 and add 4 — starting from 1. The function should return the exact sequence of operations that leads to the target, formatted as a readable expression.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to solve problems using recursion and logical branching.
+
+How to build and trace sequences of operations dynamically.
+
+How to represent computational steps as string expressions.
+
+How to detect when a solution path is not possible.
+
+Instructions
+General
+Create a function named findExpression that:
+
+Takes a single argument: a number (the target value).
+
+Starts from 1 and attempts to reach the target by repeatedly applying one of two operations:
+
+Add 4 (+4)
+
+Multiply by 2 (*2)
+
+Returns a string representing the sequence of operations that leads from 1 to the target.
+
+Returns undefined if no valid sequence exists.
+
+Tip: Use recursion or a loop to explore different operation paths. Note: The expression should begin with 1 and clearly show the operations taken (e.g., "1 *2 *2 +4"). The operations are applied left to right in sequence (no operator precedence): 1 *2 *2 +4 means ((1*2)*2)+4 = 8.
+
+Constraints (checked by the tests):
+
+Build the operation tokens from the provided add4 and mul2 constants: your code must reference the identifiers add4 and mul2 rather than hard-coding the "+4" / "*2" strings elsewhere.
+
+Your code must not contain the digits 5-9 (build everything from 1, +4, and *2).
+
+Example
+console.log(findExpression(8));
+// Output: "1 *2 *2 +4"
+Code Provided
+The provided code will be added to your solution and does not need to be submitted.
+
+const add4 = "+4";
+const mul2 = "*2";
+Resources
+Loops
+
+Recursion
