@@ -1,0 +1,37 @@
+This project focuses on number partitioning — breaking down a number into all possible combinations of smaller positive integers whose sum equals the original number. You’ll generate every unique combination, ensuring that order doesn’t create duplicates, and return them as a sorted array of arrays.
+
+Role Play
+You’ve joined a mathematical software team working on a number theory module. Your task is to write the logic for generating integer partitions, which are used in various areas of mathematics, from combinatorics to probability. Your function will compute all possible ways to express a number as the sum of positive integers.
+
+Learning Objective
+At the end of this project, you will have learned:
+
+How to implement recursive algorithms for generating combinations.
+
+How to handle duplicate elimination by maintaining consistent order.
+
+How to work with nested arrays to represent structured results.
+
+How to sort and format results for clean output.
+
+Instructions
+General
+Create a function named sums that:
+
+Accepts a single number as an argument.
+
+Returns an array of arrays, where each inner array represents a unique partition of that number.
+
+Ensures that [1, 2] and [2, 1] are considered duplicates — only one should appear.
+
+Returns the partitions sorted by ascending order of elements.
+
+Tip: Use recursion to build partitions incrementally, reducing the target number step by step. Note: Maintain non-decreasing order within each partition to avoid duplicates.
+
+Example
+console.log(sums(4));
+// Output: [ [1, 1, 1, 1], [1, 1, 2], [1, 3], [2, 2] ]
+Resources
+Recursion
+
+Array sorting
