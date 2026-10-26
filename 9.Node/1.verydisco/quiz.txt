@@ -1,0 +1,65 @@
+In this project, you will create a simple Node.js script that takes a command-line argument and transforms it into a “very disco” version of itself by rearranging each word’s halves. The goal is to manipulate string data from terminal input and output a fun, dynamic result to the console.
+
+Role Play
+You’re a command-line DJ! Your mission: remix any word or sentence you receive into a very disco version. Each word gets sliced, flipped, and recombined — creating funky transformations that give “discovery” its groove back as “verydisco”.
+
+Learning Objective
+By completing this project, you will learn how to:
+
+Read command-line arguments using process.argv.
+
+Manipulate and transform strings with split(), slice(), and join().
+
+Use Math.ceil() to handle uneven string lengths.
+
+Output results to the console using console.log().
+
+Instructions
+General
+Create a script named verydisco.mjs that:
+
+Reads the first argument passed to the command line (after the script name).
+
+Transforms each word in the argument into its “disco” version by:
+
+Splitting the word in two halves (rounded up for odd lengths).
+
+Swapping the two halves.
+
+Prints the final result to the console.
+
+Example Behavior
+Input:
+
+node verydisco.mjs discovery
+Output:
+
+verydisco
+Explanation:
+
+Split discovery → first half: disco, second half: very
+
+Swap and combine → verydisco
+
+Input:
+
+node verydisco.mjs "Node is awesome"
+Output:
+
+deNo si omeawes
+Explanation:
+
+Node → split into No + de → recombine to deNo
+
+is → split into i + s → recombine to si
+
+awesome → split into awes + ome → recombine to omeawes
+
+Join all → deNo si omeawes
+
+Hints
+Read the first argument (process.argv[2]) and split it into words.
+
+For each word, cut it in two at Math.ceil(word.length / 2) and swap the two halves.
+
+Join the transformed words back with spaces and print the result.
