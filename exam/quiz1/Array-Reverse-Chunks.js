@@ -10,7 +10,6 @@ function reverseChunks(arr, chunkSize) {
       right--;
     }
   }
-
   return arr;
 }
 
