@@ -4,7 +4,6 @@ function FinalAttempt(callback, count) {
       try {
         return await callback(...args);
       } catch (error) {
-        // Retry until the maximum number of attempts is reached
       }
     }
 
